@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Антон Тимичев](https://up.htmlacademy.ru/adaptive/15/user/699951).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Пономарёва](https://htmlacademy.ru/profile/id153610).
 
 ---
 
