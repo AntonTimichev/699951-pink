@@ -7,8 +7,8 @@
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo">
-        <span aria-label="text-logo">PINK</span>
+      <a class="logo logo--index">
+        <span class="logo__text" aria-label="text-logo">PINK</span>
       </a>
       <nav class="main-nav">
         <a href="#" class="main-nav__button button-toggle">Меню</a>
@@ -17,13 +17,13 @@
             <a class="site-list__link">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="#" class="site-list__link">Фотографии</a>
+            <a class="site-list__link" href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a href="#" class="site-list__link">Конкурс</a>
+            <a class="site-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a href="#" class="site-list__link">HTML Academy</a>
+            <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -38,13 +38,19 @@
           <a class="button-act button-act--download" href="#">Скачать приложение</a>
           <ul class="promo__list store-list">
             <li class="store-list__item">
-              <a class="store-list__apple-logo" href="#">Apple</a>
+              <a class="store-list__os store-list__os--apple" href="#">
+                <span class="visually-hidden">Apple</span>
+              </a>
             </li>
             <li class="store-list__item">
-              <a class="store-list__android-logo" href="#">Android</a>
+              <a class="store-list__os store-list__os--android" href="#">
+                <span class="visually-hidden">Android</span>
+              </a>
             </li>
             <li class="store-list__item">
-              <a class="store-list__microsoft-logo" href="#">Microsoft</a>
+              <a class="store-list__os store-list__os--microsoft" href="#">
+                <span class="visually-hidden">Microsoft</span>
+              </a>
             </li>
           </ul>
           <p class="promo__platform">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -62,12 +68,10 @@
             <li class="advantages__item">
               <h3 class="advantages__caption">Поднимает настроение</h3>
               <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-              <img class="advantages__image advantages__image--smart1 visually-hidden" src="http://placehold.it/150x100" width="150" height="100" alt="Pink поднимает настроение">
             </li>
             <li class="advantages__item">
               <h3 class="advantages__caption">Меняет мир вокруг</h3>
               <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-              <img class="advantages__image advantages__image--smart2 visually-hidden" src="http://placehold.it/150x100" width="150" height="100" alt="Pink меняет мир вокруг">
             </li>
             <li class="advantages__item">
               <h3 class="advantages__caption">Заводит новых друзей</h3>
@@ -98,29 +102,20 @@
       <section class="rates">
         <div class="rates__wrapper slider">
           <h2 class="visually-hidden">Тарифы</h2>
-          <div class="rates__list slider__list">
-            <div class="rates__item slider__item">
-              <div class="rates-title">
-                <span class="rates__hit">Хит</span>
-                <b class="rates__caption">Стандарт</b>
-                <span class="rates__price">3,99 usd</span>
-              </div>
-              <ul class="rates__functions">
-                <li class="rates__function-item">
-                  <span class="rates__function-name">Розовый фильтр</span>
-                  <span class="rates__availability rates__availability--on">да</span>
-                </li>
-                <li class="rates__function-item">
-                  <span class="rates__function-name">Смайлики</span>
-                  <span class="rates__availability rates__availability--on">да</span>
-                </li>
-                <li class="rates__function-item">
-                  <span class="rates__function-name">Комментарии</span>
-                  <span class="rates__availability rates__availability--off">нет</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <table class="rates__list slider__list">
+            <tr>
+              <td class="rates__title">Стандарт 3,99 USD</td>
+            </tr>
+            <tr>
+              <td class="rates__function rates__function--on">Розовый фильтр</td>
+            </tr>
+            <tr>
+              <td class="rates__function rates__function--on">Смайлики</td>
+            </tr>
+            <tr>
+              <td class="rates__function rates__function--off">Комментарии</td>
+            </tr>
+          </table>
           <p class="reviews__toggles slider__toggles">
             <button class="slider__toggle" type="button">1</button>
             <button class="slider__toggle" type="button">2</button>
@@ -143,11 +138,11 @@
           <div class="contacts__list">
             <div class="contacts__item">
               <b class="contacts__action">Звоните:</b>
-              <span class="contacts__note">+7 (812) 555-66-66</span>
+              <a class="contacts__note" href="tel:+7 (812) 555-66-66">+7 (812) 555-66-66</a>
             </div>
             <div class="contacts__item">
               <b class="contacts__action">Пишите:</b>
-              <span class="contacts__note">mail@htmlacademy.ru</span>
+              <a class="contacts__note" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </div>
             <div class="contacts__item">
               <b class="contacts__action">Приезжайте в гости:</b>
