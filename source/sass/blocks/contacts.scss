@@ -1,0 +1,51 @@
+.contacts {
+  text-align: center;
+  position: relative;
+}
+
+.contacts__wrapper {
+  @include page-padding;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding-top: 46px;
+  background-color: #ffffff;
+}
+
+.contacts__intro {
+  margin-bottom: 36px;
+}
+
+.contacts__text {
+  @include font-settings(24px, 28px, 300);
+  @include indent-zero;
+}
+
+.contacts__list {
+  @include list-none;
+  @include indent-zero;
+}
+
+.contacts__item {
+  margin-bottom: 23px;
+}
+
+.contacts__action {
+  @include font-settings(18px, 24px, bold);
+}
+
+.contacts__note {
+  @include font-settings(24px, 26px, 300);
+  text-decoration: none;
+  color: #d22856;
+}
+
+.contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 645px;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+}

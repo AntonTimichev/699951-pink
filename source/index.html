@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="page-header">
-      <a class="logo logo--index">
-        <span class="logo__text" aria-label="text-logo">PINK</span>
-      </a>
+      <div class="page-header__top">
+        <a class="page-header__logo">
+          <span class="visually-hidden" aria-label="text-logo">PINK</span>
+        </a>
+        <a href="#" class="page-header__menu-btn">
+          <span class="visually-hidden">Меню</span>
+        </a>
+      </div>
       <nav class="main-nav">
-        <a href="#" class="main-nav__button button-toggle">Меню</a>
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link">Главная</a>
@@ -33,9 +38,11 @@
       <h1 class="visually-hidden">Приложение Pink</h1>
 
       <section class="promo">
-        <div class="promo__wrapper">
+        <div class="promo__title">
           <h2 class="visually-hidden">Где скачать приложение Pink</h2>
-          <a class="button-act button-act--download" href="#">Скачать приложение</a>
+        </div>
+        <div class="promo__app">
+          <a class="promo__btn button-act button-act--download" href="#">Скачать приложение</a>
           <ul class="promo__list store-list">
             <li class="store-list__item">
               <a class="store-list__os store-list__os--apple" href="#">
@@ -53,7 +60,7 @@
               </a>
             </li>
           </ul>
-          <p class="promo__platform">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          <p class="promo__gadget">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </section>
 
@@ -61,8 +68,8 @@
         <div class="advantages__wrapper">
           <header class="advantages__header">
             <h2 class="visually-hidden">Функции приложения Pink</h2>
-            <p class="advantages__intro">Устали от серости мегаполиса?</p>
-            <p class="advantages__intro">Нам есть, что вам предложить</p>
+            <p class="advantages__intro advantages__intro--question">Устали от серости мегаполиса?</p>
+            <p class="advantages__intro advantages__intro--answer">Нам есть, что вам предложить</p>
           </header>
           <ul class="advantages__list">
             <li class="advantages__item">
@@ -73,12 +80,11 @@
               <h3 class="advantages__caption">Меняет мир вокруг</h3>
               <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--image">
               <h3 class="advantages__caption">Заводит новых друзей</h3>
               <p class="advantages__description">Ставтье лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
-          <img class="advantages__image advantages__image--smart3" src="http://placehold.it/150x100" width="150" height="100" alt="Pink поднимает настроение">
         </div>
       </section>
 
@@ -87,15 +93,18 @@
           <h2 class="visually-hidden">Отзывы пользователей</h2>
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite>
+              <h3 class="reviews__author-name">Николай Петров</h3>
               <p class="reviews__text">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
             </blockquote>
           </div>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
+          <div class="reviews__toggles slider__toggles">
+            <input type="radio" id="review-1" class="slider__toggle" value="1">
+            <input type="radio" id="review-2" class="slider__toggle" value="2">
+            <input type="radio" id="review-3" class="slider__toggle" value="3">
+            <label for="review-1" class="slider__sign"></label>
+            <label for="review-2" class="slider__sign"></label>
+            <label for="review-3" class="slider__sign"></label>
+          </div>
         </div>
       </section>
 
@@ -103,57 +112,60 @@
         <div class="rates__wrapper slider">
           <h2 class="visually-hidden">Тарифы</h2>
           <table class="rates__list slider__list">
-            <tr>
-              <td class="rates__title">Стандарт 3,99 USD</td>
+            <tr class="rates__item rates__item--top">
+              <td class="rates__caption">
+                <h3 class="rates__title">Стандарт</h3>
+                <span class="rates__price">3,99 USD</span>
+              </td>
             </tr>
-            <tr>
+            <tr class="rates__item">
               <td class="rates__function rates__function--on">Розовый фильтр</td>
             </tr>
-            <tr>
+            <tr class="rates__item">
               <td class="rates__function rates__function--on">Смайлики</td>
             </tr>
-            <tr>
+            <tr class="rates__item">
               <td class="rates__function rates__function--off">Комментарии</td>
             </tr>
           </table>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
+          <div class="rates__toggles slider__toggles">
+            <input type="radio" id="rates-1" class="rates__toggle" value="1">
+            <input type="radio" id="rates-2" class="rates__toggle" value="2">
+            <input type="radio" id="rates-3" class="rates__toggle" value="3">
+            <label for="rates-1" class="rates__sign"></label>
+            <label for="rates-2" class="rates__sign"></label>
+            <label for="rates-3" class="rates__sign"></label>
+          </div>
         </div>
       </section>
 
-    </main>
-
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-
-        <section class="contacts">
+      <section class="contacts">
+        <div class="contacts__wrapper">
           <h2 class="visually-hidden">Контакты разработчиков</h2>
           <header class="contacts__intro">
             <p class="contacts__text">Остались вопросы?</p>
             <p class="contacts__text">Свяжитесь с нами</p>
           </header>
-          <div class="contacts__list">
-            <div class="contacts__item">
+          <ul class="contacts__list">
+            <li class="contacts__item">
               <b class="contacts__action">Звоните:</b>
               <a class="contacts__note" href="tel:+78125556666">+7 (812) 555-66-66</a>
-            </div>
-            <div class="contacts__item">
+            </li>
+            <li class="contacts__item">
               <b class="contacts__action">Пишите:</b>
               <a class="contacts__note" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </div>
-            <div class="contacts__item">
+            </li>
+            <li class="contacts__item">
               <b class="contacts__action">Приезжайте в гости:</b>
               <span class="contacts__note">Улица Большая Конюшенная, 19/8</span>
-            </div>
-          </div>
-        </section>
-
-        <iframe class="page-footer__map" src="https://yandex.ru/map-widget/v1/-/CBBf54EKXC" width="320" height="645" frameborder="1" allowfullscreen="true"></iframe>
-      </div>
-    </footer>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1392.9440897246695!2d30.322747851307753!3d59.93921821781792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538925095906" width="320" height="645" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </section>
+    </main>
 
   </body>
 </html>

@@ -1,0 +1,13 @@
+.page-header {
+  @include font-settings(18px, 32px, bold);
+  @include indent-zero;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $base-color;
+}
+
+.page-header__top {
+  height: 69px;
+  background-color: #1d2631;
+  border-bottom: solid 1px #000000;
+}

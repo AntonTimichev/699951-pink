@@ -1,0 +1,40 @@
+.promo {
+  @include font-settings(14px, 24px, 300);
+  position: relative;
+  background-color: #1d2631;
+  color: #ffffff;
+  text-align: center;
+  border-bottom: solid 1px #1d2631;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 176px;
+    left: 0;
+    width: 258px;
+    height: 286px;
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.promo__title {
+  height: 462px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.promo__app {
+  padding-top: 28px;
+  @include page-padding;
+}
+
+.promo__btn {
+  margin-bottom: 115px;
+}
+
+.promo__gadget {
+  @include indent-zero;
+  margin-bottom: 36px;
+}

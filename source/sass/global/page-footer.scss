@@ -1,0 +1,6 @@
+.page-footer {
+  @include font-settings(14px, 18px, normal);
+  color: $base-color;
+  background-color: #ffffff;
+  outline: solid 5px greenyellow;
+}

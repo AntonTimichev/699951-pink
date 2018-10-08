@@ -1,0 +1,5 @@
+.main-nav__list {
+  @include list-none;
+  @include indent-zero;
+  text-align: center;
+}
