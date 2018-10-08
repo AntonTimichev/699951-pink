@@ -23,6 +23,7 @@
   @include list-none;
   @include indent-zero;
   @include page-padding;
+
   &::after {
     content: "";
     display: inline-block;
@@ -30,7 +31,6 @@
     height: 320px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
-
   }
 }
 

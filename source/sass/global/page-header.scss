@@ -1,6 +1,7 @@
 .page-header {
   @include font-settings(18px, 32px, bold);
   @include indent-zero;
+  width: auto;
   text-transform: uppercase;
   color: #ffffff;
   background-color: $base-color;

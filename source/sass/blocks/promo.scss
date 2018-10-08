@@ -1,33 +1,36 @@
 .promo {
   @include font-settings(14px, 24px, 300);
-  position: relative;
+  width: auto;
   background-color: #1d2631;
   color: #ffffff;
   text-align: center;
   border-bottom: solid 1px #1d2631;
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 176px;
-    left: 0;
-    width: 258px;
-    height: 286px;
-    background-image: url("../img/iphone-hand-mobile@1x.png");
-    background-repeat: no-repeat;
-  }
 }
 
 .promo__title {
   height: 462px;
+  width: auto;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 320px;
+    height: 100%;
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 258px;
+  }
 }
 
 .promo__app {
-  padding-top: 28px;
   @include page-padding;
+  width: auto;
+  padding-top: 28px;
 }
 
 .promo__btn {

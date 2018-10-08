@@ -8,7 +8,6 @@
 }
 
 .rates__item {
-
   &--top {
     background-color: $base-color;
     position: relative;
@@ -45,9 +44,16 @@
 .rates__function {
   @include font-settings;
   padding: 0;
-  padding: 21px 0 21px 43px;
   text-transform: uppercase;
   border-bottom: solid 2px #e5e5e5;
+
+  &--on {
+    padding: 21px 0 21px 43px;
+  }
+
+  &--off {
+    padding: 21px 0 21px 43px;
+  }
 }
 
 .rates__toggles {
