@@ -1,0 +1,44 @@
+.posts {
+  padding-top: 30px;
+}
+
+.posts__item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.posts__author {
+  @include page-padding;
+  text-align: left;
+}
+
+.posts__wrapper {
+  padding: 20px 0 20px 17px;
+  background-color: $texture-color;
+}
+
+.posts__name {
+  @include font-settings(14px, 24px, bold);
+  color: $base-color;
+  margin: 0;
+}
+
+.posts__time-ago {
+  @include font-settings(12px, 24px, 300);
+  text-transform: uppercase;
+}
+
+.posts__desc {
+  @include font-settings(14px, 24px, normal);
+  margin: 0 0 9px 0;
+}
+
+.posts__like {
+  @include font-settings(12px, 24px, normal);
+  text-transform: uppercase;
+  color: $insistent-color;
+  margin: 0;
+}

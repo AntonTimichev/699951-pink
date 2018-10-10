@@ -1,19 +1,16 @@
 .promo {
   @include font-settings(14px, 24px, 300);
-  width: auto;
   background-color: #1d2631;
   color: #ffffff;
-  text-align: center;
   border-bottom: solid 1px #1d2631;
 }
 
 .promo__title {
   height: 462px;
-  width: auto;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
 
   &::before {
     content: "";
@@ -29,7 +26,6 @@
 
 .promo__app {
   @include page-padding;
-  width: auto;
   padding-top: 28px;
 }
 

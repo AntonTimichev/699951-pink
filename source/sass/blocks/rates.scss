@@ -1,5 +1,11 @@
 .rates {
   border: none;
+  padding-top: 65px;
+  background-color: $texture-color;
+}
+
+.rates__wrapper {
+  background-color: #ffffff;
 }
 
 .rates__list {
@@ -10,24 +16,12 @@
 .rates__item {
   &--top {
     background-color: $base-color;
-    position: relative;
   }
 }
 
 .rates__caption {
-  padding: 0;
-  padding-top: 23px;
-  padding-bottom: 18px;
+  padding: 23px 20px 18px;
   color: #ffffff;
-  text-align: center;
-  border-bottom: solid 1px $base-color;
-
-  &::before {
-    @include font-settings(24px, 30px, 300);
-    content: "ХИТ";
-    position: absolute;
-    left: 0;
-  }
 }
 
 .rates__title {
@@ -38,27 +32,29 @@
 
 .rates__price {
   @include font-settings(24px, 30px, 300);
-  margin-bottom: 18px;
+  position: relative;
+
+  &::before {
+    content: "ХИТ";
+    position: absolute;
+    left: -90px;
+    top: -50px;
+  }
 }
 
 .rates__function {
   @include font-settings;
   padding: 0;
   text-transform: uppercase;
+  text-align: left;
   border-bottom: solid 2px #e5e5e5;
-
-  &--on {
-    padding: 21px 0 21px 43px;
-  }
-
-  &--off {
-    padding: 21px 0 21px 43px;
-  }
+  padding-left: 13%;
+  padding-top: 21px;
+  padding-bottom: 21px;
 }
 
 .rates__toggles {
-  background-color: #f2f2f2;
-  text-align: center;
+  background-color: $texture-color;
   padding-top: 40px;
   padding-bottom: 46px;
 }

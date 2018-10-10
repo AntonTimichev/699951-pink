@@ -1,0 +1,11 @@
+.competition__intro {
+  @include page-padding;
+  padding-top: 43px;
+  border-bottom: solid 1px #ffffff;
+}
+
+.competition__text-intro {
+  @include indent-zero;
+  @include font-settings;
+  margin-bottom: 18px;
+}

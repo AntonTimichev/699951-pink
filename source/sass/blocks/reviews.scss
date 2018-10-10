@@ -1,15 +1,3 @@
-.reviews {
-  padding-top: 48px;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  margin-top: -43px;
-}
-
-.reviews__list {
-  margin-bottom: 38px;
-}
-
 .reviews__author-name {
   @include font-settings(18px, 30px, bold);
   @include indent-zero;
@@ -25,8 +13,10 @@
 }
 
 .reviews__item {
-  @include indent-zero;
   @include page-padding;
+  padding-top: 48px;
+  padding-bottom: 38px;
+  margin: 0;
 }
 
 .reviews__toggles {

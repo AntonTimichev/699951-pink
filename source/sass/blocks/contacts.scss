@@ -1,14 +1,5 @@
-.contacts {
-  text-align: center;
-  position: relative;
-}
-
 .contacts__wrapper {
   @include page-padding;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
   padding-top: 46px;
   background-color: #ffffff;
 }
@@ -38,14 +29,12 @@
 .contacts__note {
   @include font-settings(24px, 26px, 300);
   text-decoration: none;
-  color: #d22856;
+  color: $insistent-color;
 }
 
 .contacts__map {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 645px;
+  height: 203px;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
+  background-position: center;
 }

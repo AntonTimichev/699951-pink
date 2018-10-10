@@ -1,34 +1,32 @@
 .advantages {
-  text-align: center;
-  background-color: #f2f2f2;
-  position: relative;
-  z-index: 1;
+  background-color: $texture-color;
+}
+
+.advantages__header {
+  @include page-padding;
+  padding-top: 40px;
+  background-color: #ffffff;
+  border-bottom: solid 1px #ffffff;
 }
 
 .advantages__intro {
   @include font-settings(24px, 29px, 300);
   @include indent-zero;
   color: $base-color;
-
-  &--question {
-    margin-bottom: 30px;
-  }
-
-  &--answer {
-    margin-bottom: 30px;
-  }
+  margin-bottom: 30px;
 }
 
 .advantages__list {
   @include list-none;
-  @include indent-zero;
   @include page-padding;
+  padding-top: 53px;
+  margin: 0;
 
   &::after {
     content: "";
     display: inline-block;
     width: 157px;
-    height: 320px;
+    height: 278px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
   }
@@ -40,8 +38,8 @@
 
 .advantages__caption {
   @include font-settings(18px, 24px, bold);
-  @include indent-zero;
   color: #000000;
+  margin-top: 0;
   margin-bottom: 18px;
 }
 
@@ -49,12 +47,4 @@
   @include font-settings(14px, 24px, normal);
   @include indent-zero;
   color: $base-color;
-}
-
-.advantages__header {
-  @include page-padding;
-  padding-top: 40px;
-  margin-bottom: 86px;
-  background-color: #ffffff;
-  border-bottom: solid 1px #ffffff;
 }
