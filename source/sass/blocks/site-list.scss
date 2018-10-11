@@ -1,0 +1,17 @@
+.site-list {
+  @include list-none;
+}
+
+.site-list__item {
+  padding-top: 14px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  border-top: solid 1px #485461;
+  border-bottom: solid 1px #000000;
+}
+
+.site-list__link {
+  text-decoration: none;
+  display: inline-block;
+  color: #ffffff;
+}

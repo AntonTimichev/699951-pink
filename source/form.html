@@ -2,17 +2,26 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <span aria-label="text-logo">PINK</span>
-      </a>
+      <div class="page-header__top">
+        <a class="page-header__logo" href="index.html">
+          <span class="visually-hidden" aria-label="text-logo">PINK</span>
+        </a>
+        <a href="#" class="page-header__menu-btn">
+          <span class="visually-hidden">Меню</span>
+        </a>
+      </div>
       <nav class="main-nav">
-        <a href="#" class="main-nav__button button-toggle">Меню</a>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
@@ -29,8 +38,8 @@
     </header>
 
     <main class="main-form">
-      <section class="main-header">
-        <h1 class="main-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <section class="top">
+        <h1 class="top__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </section>
 
       <section class="competition">
@@ -38,7 +47,7 @@
           <h2 class="visually-hidden">Форма для участника конкурса</h2>
           <p class="competition__text-intro">Поделитесь своей историей и получите шанс выиграть ценный приз 	&#8212; 1000 миль на вашу бонусную карту!</p>
         </div>
-        <form class="form">
+        <form class="competition__form form">
           <fieldset class="form__user-name">
             <label for="surname" class="form__caption-input">Фамилия:</label>
             <input type="text" class="form__input-field" id="surname" name="surname" placeholder="Укажите фамилию:" required>
@@ -48,7 +57,7 @@
             <input type="text" class="form__input-field" id="second-name" name="second-name" placeholder="Ну и отчество тоже:">
           </fieldset>
           <fieldset class="form__actions">
-            <legend class="form__legend-text">Ваши безбашенные достижения в путешествии</legend>
+            <h3 class="form__legend-text">Ваши безбашенные достижения в путешествии</h3>
             <input type="checkbox" class="form__checkbox-field" id="selfie" checked>
             <label for="selfie" class="form__caption-check">Сделал селфи с акулой</label>
             <input type="checkbox" class="form__checkbox-field" id="tan" checked>
@@ -69,7 +78,7 @@
             <input type="email" class="form__input-field" id="mail" name="mail" placeholder="Введите почту" required>
           </fieldset>
           <fieldset class="form__user-app">
-            <legend class="form__legend-text">С каким приложением путешествовали?</legend>
+            <h3 class="form__legend-text">С каким приложением путешествовали?</h3>
             <input type="radio" class="form__radio-field" id="ios" checked>
             <label for="ios" class="form__caption-check">Pink для iOS</label>
             <input type="radio" class="form__radio-field" id="android">
@@ -78,12 +87,12 @@
             <label for="windows" class="form__caption-check">Windows Phone</label>
           </fieldset>
           <fieldset class="form__description">
-            <legend class="form__legend-text form__legend-text--desc">Опишите свои эмоции</legend>
-            <textarea class="form__massage" name="user-text" cols="30" rows="7" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <h3 class="form__legend-text form__legend-text--desc">Опишите свои эмоции</h3>
+            <textarea class="form__message" name="user-text" cols="30" rows="7" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="form__wrapper-btn form__wrapper-btn--submit">
             <button type="submit" class="form__button">Отправить форму</button>
-            <span class="form__required-field"><sup>*</sup> &#8212; обязательные поля</span>
+            <span class="form__required-field"><sup class="form__star">*</sup> &#8212; обязательные поля</span>
           </div>
           <div class="form__popup visually-hidden">
             <div class="form__wrapper-message">
@@ -105,12 +114,12 @@
       </section>
     </main>
 
-    <footer class="main-footer">
-      <div class="main-footer__wrapper">
-        <a class="logo">
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="logo logo--footer">
           <span class="logo__text" aria-label="text-logo">PINK</span>
         </a>
-        <ul class="main-footer__list social-list">
+        <ul class="page-footer__list social-list">
           <li class="social-list__item">
             <a class="social-list__btn social-list__btn--tw" href="#">
               <span class="visually-hidden">Twitter</span>
@@ -127,10 +136,10 @@
             </a>
           </li>
         </ul>
-        <div class="main-footer__copyright">
-          <a class="main-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="main-footer__text">Разработано</span>
-            <span class="main-footer__logo-company">HTML Academy</span>
+        <div class="page-footer__copyright">
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="page-footer__text">Разработано</span>
+            <span class="page-footer__logo-company">HTML Academy</span>
           </a>
         </div>
       </div>

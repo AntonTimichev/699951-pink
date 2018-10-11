@@ -1,0 +1,24 @@
+.reviews__author-name {
+  @include font-settings(18px, 30px, bold);
+  @include indent-zero;
+  color: #000000;
+  font-style: normal;
+  margin-bottom: 24px;
+}
+
+.reviews__text {
+  @include font-settings;
+  @include indent-zero;
+  color: $base-color;
+}
+
+.reviews__item {
+  @include page-padding;
+  padding-top: 48px;
+  padding-bottom: 38px;
+  margin: 0;
+}
+
+.reviews__toggles {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,29 @@
+.filter__intro {
+  padding: 45px 20px;
+}
+
+.filter__text {
+  @include font-settings;
+  margin: 0;
+}
+
+.filter-block {
+  background-color: $texture-color;
+}
+
+.filter__controls {
+  height: 160px;
+  border-bottom: solid 1px #dddfe0;
+}
+
+.filter-btn {
+  padding: 38px 20px;
+}
+
+.filter-btn__item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,50 @@
+.advantages {
+  background-color: $texture-color;
+}
+
+.advantages__header {
+  @include page-padding;
+  padding-top: 40px;
+  background-color: #ffffff;
+  border-bottom: solid 1px #ffffff;
+}
+
+.advantages__intro {
+  @include font-settings(24px, 29px, 300);
+  @include indent-zero;
+  color: $base-color;
+  margin-bottom: 30px;
+}
+
+.advantages__list {
+  @include list-none;
+  @include page-padding;
+  padding-top: 53px;
+  margin: 0;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 157px;
+    height: 278px;
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.advantages__item {
+  margin-bottom: 35px;
+}
+
+.advantages__caption {
+  @include font-settings(18px, 24px, bold);
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.advantages__description {
+  @include font-settings(14px, 24px, normal);
+  @include indent-zero;
+  color: $base-color;
+}

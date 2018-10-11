@@ -1,0 +1,60 @@
+.rates {
+  border: none;
+  padding-top: 65px;
+  background-color: $texture-color;
+}
+
+.rates__wrapper {
+  background-color: #ffffff;
+}
+
+.rates__list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rates__item {
+  &--top {
+    background-color: $base-color;
+  }
+}
+
+.rates__caption {
+  padding: 23px 20px 18px;
+  color: #ffffff;
+}
+
+.rates__title {
+  @include font-settings(18px, 30px, bold);
+  @include indent-zero;
+  text-transform: uppercase;
+}
+
+.rates__price {
+  @include font-settings(24px, 30px, 300);
+  position: relative;
+
+  &::before {
+    content: "ХИТ";
+    position: absolute;
+    left: -90px;
+    top: -50px;
+  }
+}
+
+.rates__function {
+  @include font-settings;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: solid 2px #e5e5e5;
+  padding-left: 13%;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.rates__toggles {
+  background-color: $texture-color;
+  padding-top: 40px;
+  padding-bottom: 46px;
+}

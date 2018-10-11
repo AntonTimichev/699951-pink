@@ -1,0 +1,12 @@
+.photo__intro {
+  @include page-padding;
+  padding-top: 43px;
+  border-bottom: solid 1px #ffffff;
+}
+
+.photo__text-intro {
+  @include font-settings;
+  margin-top: 0;
+  margin-bottom: 18px;
+  padding: 0 18px;
+}

@@ -1,0 +1,28 @@
+.button-act {
+  @include font-settings(18px, 18px, bold);
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 0;
+  box-sizing: border-box;
+  width: 280px;
+  height: 55px;
+  border: solid 3px;
+  border-radius: 50px;
+
+  &--download {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  &--post {
+    color: $insistent-color;
+    border-color: $insistent-color;
+  }
+
+  &--cancel {
+    color: $base-color;
+    border-color: $base-color;
+    opacity: 0.1;
+  }
+}

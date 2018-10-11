@@ -1,0 +1,11 @@
+.page-footer__wrapper {
+  @include font-settings(14px, 18px, normal);
+  color: $base-color;
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-bottom: solid 1px #ffffff;
+}
+
+.page-footer__link {
+  display: inline-block;
+}
