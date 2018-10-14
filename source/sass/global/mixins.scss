@@ -13,18 +13,44 @@
   list-style: none;
 }
 
-@mixin page-padding {
-  padding-left: 20px;
-  padding-right: 20px;
+@mixin page-padding($indent: 20px) {
+  padding-left: $indent;
+  padding-right: $indent;
 }
 
-@mixin fieldset {
+@mixin fieldset($top: 39px) {
   display: block;
-  padding: 36px 20px 0;
+  padding: $top 20px 0;
   margin: 0;
   text-align: left;
 }
 
 @mixin border-radius($radius: 2px) {
   border-radius: $radius;
+}
+
+@mixin placeholder-kit {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin placeholder-moz {
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+}
+
+@mixin placeholder-ms {
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-ms-input-placeholder {
+    @content;
+  }
 }

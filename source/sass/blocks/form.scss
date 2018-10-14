@@ -1,13 +1,86 @@
 .form {
   border: none;
 
-  & > fieldset {
-    border: none;
+  input[type="text"] {
+    @include placeholder-kit {
+      @include font-settings(18px, 30px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-moz {
+      @include font-settings(18px, 13px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-ms {
+      @include font-settings(18px, 0, normal);
+      color: $base-color;
+    }
+  }
+
+  input[type="tel"] {
+    @include placeholder-kit {
+      @include font-settings(18px, 30px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-moz {
+      @include font-settings(18px, 13px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-ms {
+      @include font-settings(18px, 0, normal);
+      color: $base-color;
+    }
+  }
+
+  input[type="email"] {
+    @include placeholder-kit {
+      @include font-settings(18px, 30px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-moz {
+      @include font-settings(18px, 13px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-ms {
+      @include font-settings(18px, 0, normal);
+      color: $base-color;
+    }
+  }
+
+  textarea {
+    @include placeholder-kit {
+      @include font-settings(18px, 30px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-moz {
+      @include font-settings(18px, 13px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-ms {
+      @include font-settings(18px, 0, normal);
+      color: $base-color;
+    }
+  }
+}
+
+.form__group {
+  @include indent-zero;
+  border: none;
+
+  &--act {
+    background-color: $texture-color;
   }
 }
 
 .form__user-name {
-  @include fieldset;
+  @include fieldset(16px);
   text-align: left;
 }
 
@@ -15,13 +88,13 @@
   @include border-radius;
   display: block;
   box-sizing: border-box;
-  padding: 20px 20px 22px;
+  padding: 17px 20px 20px;
   width: 100%;
   background-color: #ffffff;
   border: solid 2px #e5e5e5;
 
   &:not(:last-child) {
-    margin-bottom: 18px;
+    margin-bottom: 17px;
   }
 
   &:last-child {
@@ -34,27 +107,41 @@
   display: inline-block;
   color: $insistent-color;
   text-transform: uppercase;
-  margin-bottom: 6px;
-  padding-left: 20px;
+  margin-bottom: 5px;
+  padding-left: 22px;
 }
 
 .form__actions {
-  @include fieldset;
+  @include fieldset(23px);
   position: relative;
-  background-color: $texture-color;
 }
 
 .form__legend-text {
   @include font-settings(14px, 18px, normal);
   text-transform: uppercase;
   color: $insistent-color;
+  background-color: $texture-color;
   text-align: center;
   margin: 0;
-  padding: 0 30px;
-  margin-bottom: 45px;
+  padding: 20px 40px;
+  width: 100%;
+
+  &--act {
+    padding-top: 38px;
+  }
+
+  &--app {
+    padding-top: 38px;
+  }
 
   &--desc {
-    margin-bottom: 20px;
+    padding-top: 38px;
+    padding-bottom: 16px;
+    background-color: #ffffff;
+  }
+
+  span {
+    margin: 0 auto;
   }
 }
 
@@ -78,25 +165,47 @@
 }
 
 .form__user-contacts {
-  @include fieldset;
-  padding-top: 35px;
+  @include fieldset(33px);
 }
 
 .form__user-app {
-  @include fieldset;
+  @include fieldset(19px);
+  position: relative;
   background-color: $texture-color;
 }
 
+.form__radio-field {
+  position: absolute;
+}
+
+.form__caption-radio {
+  @include font-settings(18px, 30px, normal);
+  display: inline-block;
+  padding-left: 25%;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
+  &:last-child {
+    margin-bottom: 46px;
+  }
+}
+
 .form__description {
-  @include fieldset;
+  @include fieldset(0);
+  border-bottom: solid 1px #ffffff;
 }
 
 .form__message {
+  line-height: 28px;
+  display: block;
   border: solid 2px #e5e5e5;
-  padding: 20px;
+  padding: 15px 18px 18px;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 48px;
+  margin-bottom: 44px;
 }
 
 .form__wrapper-btn {
@@ -113,9 +222,9 @@
   text-transform: uppercase;
   height: 63px;
   width: 280px;
-  padding: 0 48px;
+  padding: 0 28px;
   border: none;
-  margin-bottom: 44px;
+  margin-bottom: 35px;
 }
 
 .form__required-field {
@@ -128,4 +237,77 @@
 
 .form__star {
   color: $insistent-color;
+}
+
+@media (min-width: $tablet-width) {
+  .form__legend-text {
+  }
+
+  .form__fieldset-wrap {
+    border: solid 2px black;
+  }
+
+  .form__user-name {
+    order: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    //max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .form__caption-input {
+    min-width: 9%;
+    padding-left: 0;
+    padding-right: 3%;
+    //flex-grow: 2;
+    &--name {
+      margin-right: -18px;
+      margin-left: auto;
+    }
+  }
+
+  .form__input-field {
+    //display: block;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 22px 20px 20px;
+    width: 79%;
+    min-width: 50%;
+    background-color: #ffffff;
+    border: solid 2px #e5e5e5;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    &:last-child {
+      margin-bottom: 42px;
+    }
+  }
+
+  .form__actions {
+    order: 4;
+  }
+
+  .form__user-contacts {
+    order: 3;
+  }
+
+  .form__user-app {
+    order: 2;
+  }
+
+  .form__description {
+    order: 5;
+  }
+
+  .form__wrapper-btn {
+    order: 6;
+  }
+
+  .form__popup1 {
+    order: 7;
+  }
 }
