@@ -8,6 +8,7 @@
   padding-top: 29px;
   padding-bottom: 20px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .top__title {
@@ -31,3 +32,19 @@
     @include font-settings(50px, 60px, 300);
   }
 }
+
+@media (min-width: $desktop-width) {
+  .top {
+    height: 394px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top;
+    background-size: auto;
+    padding-top: 173px;
+  }
+
+  .top__title {
+    width: 820px;
+    margin: 0 auto;
+  }
+}
+

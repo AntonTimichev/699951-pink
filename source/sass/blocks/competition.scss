@@ -6,12 +6,19 @@
   margin: 0 auto;
   border-bottom: solid 1px #ffffff;
   box-sizing: border-box;
+
+  br {
+    display: none;
+  }
+
+  span {
+    display: none;
+  }
 }
 
 .competition__text-intro {
   @include indent-zero;
   @include font-settings;
-  //margin-bottom: 18px;
 
   &--down {
     display: none;
@@ -20,13 +27,33 @@
 
 @media (min-width: $tablet-width) {
   .competition__intro {
-    padding-top: 92px;
+    max-width: 750px;
+    padding: 92px 50px 47px;
+
+    br {
+      display: inline;
+    }
+
+    span {
+      display: inline;
+    }
   }
 
   .competition__text-intro {
     font-size: 18px;
+  }
+}
 
-    &--down {
+@media (min-width: $desktop-width) {
+  .competition__intro {
+    max-width: 820px;
+    padding: 92px 30px 47px;
+
+    br {
+      display: none;
+    }
+
+    span {
       display: inline;
     }
   }
