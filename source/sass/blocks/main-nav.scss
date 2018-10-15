@@ -3,5 +3,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  margin-top: 27px;
+  .main-nav__list {
+    margin-top: 27px;
+  }
 }

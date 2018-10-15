@@ -64,7 +64,7 @@
     }
 
     @include placeholder-ms {
-      @include font-settings(18px, 0, normal);
+      @include font-settings(18px, 30px, normal);
       color: $base-color;
     }
   }
@@ -91,6 +91,7 @@
   @include border-radius;
   display: block;
   box-sizing: border-box;
+  height: 63px;
   padding: 20px 20px 20px;
   width: 100%;
   background-color: #ffffff;
@@ -128,7 +129,7 @@
   text-transform: uppercase;
   color: $insistent-color;
   background-color: $texture-color;
-  //text-align: center;
+  text-align: center;
   margin: 0 auto;
   padding: 20px 0;
   width: 100%;
