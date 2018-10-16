@@ -9,11 +9,19 @@
 
 .filter-block {
   background-color: $texture-color;
-  padding-top: 20px;
 }
 
-.filter__controls {
-  height: 160px;
+.filter__wrap-img {
+  width: 280px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.filter__settings {
+  @include list-none;
+  @include indent-zero;
+  @include page-padding;
+  height: 140px;
   border-bottom: solid 1px #dddfe0;
 }
 
@@ -22,9 +30,142 @@
 }
 
 .filter-btn__item {
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter-block {
+    display: flex;
+    padding: 57px 20px;
+  }
+
+  .filter__wrap-img {
+    width: 300px;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+
+    img {
+      width: 300px;
+      height: 400px;
+    }
+  }
+
+  .filter__controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    min-width: 275px;
+    box-sizing: border-box;
+    margin-left: 45px;
+  }
+
+  .filter__settings {
+    height: 200px;
+    outline: solid 2px yellowgreen;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .filter__set {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 74px;
+    box-sizing: border-box;
+    border-bottom: solid 2px black;
+
+    &:first-child {
+      height: 55px;
+    }
+  }
+
+  .filter-btn {
+    padding: 0 12px 0 0;
+  }
+
+  .filter-btn__item {
+    margin-bottom: 24px;
+    width: 260px;
+  }
+
+  .filter__range {
+    position: relative;
+    border: solid 1px #000000;
+    min-width: 202px;
+  }
+
+  .filter__scale {
+    position: absolute;
+    top: -7px;
+    height: 14px;
+    width: 14px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border: solid 2px $insistent-color;
+    border-radius: 50%;
+
+    &--clip {
+      left: 150px;
+    }
+
+    &--paint {
+      left: 40px;
+    }
+
+    &--contrast {
+      left: 105px;
+    }
+  }
+
+  .filter__text {
+    font-size: 18px;
+  }
+
+  .filter__intro {
+    margin-bottom: 27px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter {
+    @include page-padding(10px);
+    width: 960px;
+    box-sizing: border-box;
+    margin: 0 auto 28px;
+  }
+
+  .filter__intro {
+    padding: 5px 20px 38px;
+  }
+
+  .filter-block {
+    padding-left: 80px;
+    padding-right: 60px;
+  }
+
+  .filter__controls {
+    min-width: 410px;
+    margin-left: 90px;
+  }
+
+  .filter-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .filter__range {
+    width: 288px;
+  }
+
+  .filter-btn__item {
+    margin: 0;
+    width: 183px;
   }
 }

@@ -1,6 +1,6 @@
 .top {
   @include page-padding;
-  height: 170px;
+  min-height: 170px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center 23%;
@@ -19,7 +19,7 @@
 
 @media (min-width: $tablet-width) {
   .top {
-    height: 329px;
+    min-height: 329px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center 27%;
@@ -35,7 +35,7 @@
 
 @media (min-width: $desktop-width) {
   .top {
-    height: 394px;
+    min-height: 394px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: center top;
     background-size: auto;
@@ -45,5 +45,9 @@
   .top__title {
     width: 820px;
     margin: 0 auto;
+
+    &--photo {
+      width: 400px;
+    }
   }
 }
