@@ -104,12 +104,12 @@
   }
 
   .contacts__iframe-mob {
-    display: none;
+    height: 377px;
   }
 
-  .contacts__iframe-tab {
+  /*.contacts__iframe-tab {
     display: block;
-  }
+  }*/
 }
 
 @media (min-width: $desktop-width) {
@@ -170,14 +170,14 @@
   }
 
   .contacts__iframe-mob {
-    display: none;
+    height: 504px;
   }
-
+/*
   .contacts__iframe-tab {
     display: none;
   }
 
   .contacts__iframe-desc {
     display: block;
-  }
+  }*/
 }

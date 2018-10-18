@@ -61,7 +61,7 @@
   display: none;
 }
 
-@media (min-width: 320px) and (max-width: $tablet-width) {
+@media (min-width: 320px) and (max-width: $tablet-width - 1) {
   .advantages__wrapper {
     max-width: 500px;
     margin: 0 auto;
