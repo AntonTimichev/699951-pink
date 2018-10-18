@@ -106,10 +106,6 @@
   .contacts__iframe-mob {
     height: 377px;
   }
-
-  /*.contacts__iframe-tab {
-    display: block;
-  }*/
 }
 
 @media (min-width: $desktop-width) {
@@ -172,12 +168,4 @@
   .contacts__iframe-mob {
     height: 504px;
   }
-/*
-  .contacts__iframe-tab {
-    display: none;
-  }
-
-  .contacts__iframe-desc {
-    display: block;
-  }*/
 }
