@@ -37,6 +37,17 @@
   @include font-settings(24px, 26px, 300);
   text-decoration: none;
   color: $insistent-color;
+
+  &--mail {
+    &:hover {
+      text-decoration: underline;
+      color: $base-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .contacts__map {

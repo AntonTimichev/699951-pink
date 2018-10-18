@@ -73,7 +73,6 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 20px 0 0;
-    //margin-left: -20px;
 
     .posts__item {
       display: flex;
@@ -123,19 +122,18 @@
       justify-content: space-between;
       padding: 24px 27px 16px;
       background-color: $texture-color;
+    }
 
+    .posts__name {
+      order: 1;
+    }
 
-      .posts__name {
-        order: 1;
-      }
+    .posts__desc {
+      order: 3;
+    }
 
-      .posts__desc {
-        order: 3;
-      }
-
-      .posts__like {
-        order: 2;
-      }
+    .posts__like {
+      order: 2;
     }
   }
 

@@ -121,6 +121,10 @@
     &--contrast {
       left: 105px;
     }
+
+    &:active {
+      background-color: $insistent-color;
+    }
   }
 
   .filter__text {
