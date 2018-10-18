@@ -1,0 +1,8 @@
+.social-list {
+  @include list-none;
+  @include indent-zero;
+  display: block;
+  width: 178px;
+  height: 53px;
+  outline: solid 3px greenyellow;
+}

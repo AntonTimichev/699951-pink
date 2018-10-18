@@ -1,27 +1,37 @@
 .rates {
   border: none;
-  padding-top: 65px;
+  padding-top: 93px;
   background-color: $texture-color;
+  width: 100%;
 }
 
 .rates__wrapper {
-  background-color: #ffffff;
+  width: 320px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .rates__list {
-  width: 100%;
+  transform: translateX(-542px);
   border-collapse: collapse;
+  background-color: #ffffff;
+  width: 100%;
 }
 
 .rates__item {
   &--top {
     background-color: $base-color;
+    border-bottom: none;
   }
 }
 
 .rates__caption {
-  padding: 23px 20px 18px;
   color: #ffffff;
+  box-sizing: border-box;
+  padding: 16px 20px 22px;
+  border: solid 2px #e5e5e5;
+  border-top: none;
+  min-width: 281px;
 }
 
 .rates__title {
@@ -34,7 +44,7 @@
   @include font-settings(24px, 30px, 300);
   position: relative;
 
-  &::before {
+  &--hit::before {
     content: "ХИТ";
     position: absolute;
     left: -90px;
@@ -44,17 +54,141 @@
 
 .rates__function {
   @include font-settings;
-  padding: 0;
+  position: relative;
   text-transform: uppercase;
   text-align: left;
-  border-bottom: solid 2px #e5e5e5;
-  padding-left: 13%;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding: 14px 22px;
+  box-sizing: border-box;
+  min-width: 210px;
+  border: solid 2px #e5e5e5;
+  border-top: none;
+
+  &::after {
+    content: "X";
+    position: absolute;
+    top: 21%;
+    right: 9%;
+  }
+
+  span {
+    display: inline;
+  }
 }
 
 .rates__toggles {
+  display: block;
   background-color: $texture-color;
-  padding-top: 40px;
+  padding-top: 37px;
   padding-bottom: 46px;
+}
+
+@media (min-width: $tablet-width) {
+  .rates {
+    padding-top: 88px;
+  }
+
+  .rates__function {
+    position: relative;
+    text-transform: inherit;
+    padding: 8px 10px 7px 13px;
+    min-width: 150px;
+
+    span {
+      display: none;
+    }
+
+    &::after {
+      content: "X";
+      position: absolute;
+      top: 21%;
+      right: 45%;
+      display: inline-block;
+    }
+
+    &--mob::after {
+      display: none;
+    }
+  }
+
+  .rates__wrapper {
+    @include page-padding;
+    width: auto;
+    height: 100%;
+    box-sizing: content-box;
+  }
+
+  .rates__list {
+    transform: translateX(0);
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  .rates__caption {
+    min-width: 150px;
+    padding: 15px 15px 9px;
+    border-bottom: none;
+
+    &--none {
+      background-color: $texture-color;
+      border: solid 2px $texture-color;
+      border-bottom: solid 2px #e5e5e5;
+    }
+  }
+
+  .rates__title {
+    @include font-settings(16px, 24px, bold);
+  }
+
+  .rates__price {
+    font-size: 18px;
+
+    &--hit::before {
+      content: "ХИТ";
+      position: absolute;
+      top: -50px;
+      left: -30px;
+    }
+  }
+
+  .rates__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .rates {
+    padding-top: 148px;
+  }
+
+  .rates__wrapper {
+    @include page-padding(10px);
+    width: 960px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .rates__list {
+    margin-bottom: 95px;
+  }
+
+  .rates__title {
+    @include font-settings(18px, 30px, bold);
+  }
+
+  .rates__price {
+    @include font-settings(24px, 30px, 300);
+  }
+
+  .rates__caption {
+    min-width: 233px;
+    padding: 16px 20px 22px;
+    border-bottom: none;
+  }
+
+  .rates__function {
+    font-size: 18px;
+    padding: 14px 20px 15px;
+    box-sizing: border-box;
+    border-top: none;
+  }
 }

@@ -1,60 +1,162 @@
 .form {
   border: none;
 
-  & > fieldset {
-    border: none;
+  input[type="text"] {
+    @include placeholder-kit {
+      @include font-settings(18px, 30px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-moz {
+      @include font-settings(18px, 13px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-ms {
+      @include font-settings(18px, 0, normal);
+      color: $base-color;
+    }
+  }
+
+  input[type="tel"] {
+    @include placeholder-kit {
+      @include font-settings(18px, 30px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-moz {
+      @include font-settings(18px, 13px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-ms {
+      @include font-settings(18px, 0, normal);
+      color: $base-color;
+    }
+  }
+
+  input[type="email"] {
+    @include placeholder-kit {
+      @include font-settings(18px, 30px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-moz {
+      @include font-settings(18px, 13px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-ms {
+      @include font-settings(18px, 0, normal);
+      color: $base-color;
+    }
+  }
+
+  textarea {
+    @include placeholder-kit {
+      @include font-settings(18px, 30px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-moz {
+      @include font-settings(18px, 13px, normal);
+      color: $base-color;
+    }
+
+    @include placeholder-ms {
+      @include font-settings(18px, 30px, normal);
+      color: $base-color;
+    }
+  }
+}
+
+.form__group {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+
+  &--act,
+  &--app {
+    background-color: $texture-color;
   }
 }
 
 .form__user-name {
   @include fieldset;
-  text-align: left;
+  padding: 16px 20px 0;
 }
 
 .form__input-field {
   @include border-radius;
   display: block;
   box-sizing: border-box;
-  padding: 20px 20px 22px;
+  height: 63px;
+  padding: 20px 20px 20px;
   width: 100%;
   background-color: #ffffff;
   border: solid 2px #e5e5e5;
+}
 
-  &:not(:last-child) {
-    margin-bottom: 18px;
-  }
+.form__caption-input {
+  @include font-settings;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: $insistent-color;
+  text-transform: uppercase;
+  margin-bottom: 17px;
 
   &:last-child {
     margin-bottom: 42px;
   }
 }
 
-.form__caption-input {
-  @include font-settings;
-  display: inline-block;
-  color: $insistent-color;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-  padding-left: 20px;
+.form__caption-text {
+  padding-left: 22px;
+  margin-bottom: 5px;
 }
 
 .form__actions {
   @include fieldset;
+  padding: 23px 20px 0;
   position: relative;
-  background-color: $texture-color;
 }
 
 .form__legend-text {
   @include font-settings(14px, 18px, normal);
+  display: inline-block;
   text-transform: uppercase;
   color: $insistent-color;
+  background-color: $texture-color;
   text-align: center;
-  margin: 0;
-  padding: 0 30px;
-  margin-bottom: 45px;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+
+  &--act {
+    padding-top: 38px;
+  }
+
+  &--app {
+    padding-top: 38px;
+  }
 
   &--desc {
-    margin-bottom: 20px;
+    padding-top: 38px;
+    padding-bottom: 16px;
+    background-color: #ffffff;
+  }
+
+  &--tel {
+    display: none;
+  }
+
+  span {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
   }
 }
 
@@ -79,24 +181,49 @@
 
 .form__user-contacts {
   @include fieldset;
-  padding-top: 35px;
+  padding: 33px 20px 0;
 }
 
 .form__user-app {
   @include fieldset;
-  background-color: $texture-color;
+  padding: 19px 20px 0;
+  position: relative;
+}
+
+.form__radio-field {
+  position: absolute;
+}
+
+.form__caption-radio {
+  @include font-settings(18px, 30px, normal);
+  display: inline-block;
+  padding-left: 25%;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
+  &:last-child {
+    margin-bottom: 46px;
+  }
 }
 
 .form__description {
   @include fieldset;
+  padding: 0 20px;
+  border-bottom: solid 1px #ffffff;
 }
 
 .form__message {
+  min-height: 205px;
+  line-height: 28px;
+  display: block;
   border: solid 2px #e5e5e5;
-  padding: 20px;
+  padding: 15px 18px 18px;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 48px;
+  margin-bottom: 44px;
 }
 
 .form__wrapper-btn {
@@ -113,9 +240,9 @@
   text-transform: uppercase;
   height: 63px;
   width: 280px;
-  padding: 0 48px;
+  padding: 0 28px;
   border: none;
-  margin-bottom: 44px;
+  margin-bottom: 35px;
 }
 
 .form__required-field {
@@ -126,6 +253,279 @@
   width: 100%;
 }
 
+.form-require-none {
+  display: none;
+}
+
 .form__star {
   color: $insistent-color;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    @include page-padding;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .form__group {
+    &:not(&--name) {
+      box-sizing: border-box;
+      border: solid 2px #e5e5e5;
+      margin-bottom: 39px;
+    }
+
+    &--name {
+      order: 1;
+    }
+
+    &--act {
+      order: 4;
+      background-color: #ffffff;
+    }
+
+    &--tel {
+      order: 3;
+    }
+
+    &--app {
+      order: 2;
+      background-color: #ffffff;
+    }
+
+    &--desc {
+      order: 5;
+    }
+  }
+
+  .form__wrapper-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    order: 6;
+    padding: 28px 0;
+    margin: 0 auto 22px;
+  }
+
+  .form__user-app {
+    padding-top: 28px;
+  }
+
+  .form__legend-text {
+    background-color: #ffffff;
+    display: block;
+    width: auto;
+
+    &--act {
+      padding-top: 18px;
+    }
+
+    &--app {
+      padding-top: 18px;
+    }
+
+    &--desc {
+      padding-top: 18px;
+    }
+
+    &--tel {
+      display: block;
+    }
+
+    span {
+      padding: 0 24px;
+    }
+  }
+
+  .form__caption-radio {
+    padding-left: 17%;
+
+    &:last-child {
+      margin-bottom: 58px;
+    }
+  }
+
+  .form__caption-text {
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
+
+  .form__user-name {
+    padding: 24px 0 39px;
+
+    .form__caption-text {
+      padding-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+  .form__user-contacts {
+    padding: 17px 58px 26px;
+  }
+
+  .form__actions {
+    padding: 28px 0 0;
+  }
+
+  .form__description {
+    padding: 21px 58px 0;
+  }
+
+  .form__caption-input {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 52px;
+
+    &--contacts {
+      flex-direction: column;
+      margin-bottom: 29px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__input-field {
+    &--cont {
+      order: -1;
+    }
+  }
+
+  .form__caption-check {
+    padding-left: 19%;
+
+    &:last-child {
+      margin-bottom: 52px;
+    }
+  }
+
+  .form__message {
+    min-height: 191px;
+    padding-bottom: 7px;
+    margin-bottom: 52px;
+  }
+
+  .form__button {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .form__required-field {
+    width: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    @include page-padding(10px);
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 960px;
+    padding-top: 6px;
+    box-sizing: border-box;
+  }
+
+  .form__group {
+    &:not(&--name) {
+      box-sizing: border-box;
+      border: solid 2px #e5e5e5;
+      margin-bottom: 38px;
+    }
+
+    &--name {
+      width: 46.2%;
+      margin: 0;
+    }
+
+    &--act {
+      order: 4;
+      background-color: #ffffff;
+    }
+
+    &--tel {
+      order: 3;
+    }
+
+    &--app {
+      width: 46.2%;
+      margin: 0;
+    }
+
+    &--desc {
+      order: 5;
+    }
+  }
+
+  .form__user-name {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .form__caption-text {
+      padding-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+  .form__caption-radio {
+    padding-left: 29%;
+  }
+
+  .form__user-contacts {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 13px;
+  }
+
+  .form__caption-input {
+    &--contacts {
+      width: 45.7%;
+      margin-bottom: 0;
+
+      span {
+        margin-right: auto;
+      }
+    }
+  }
+
+  .form__actions {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 28px 58px 8px;
+  }
+
+  .form__caption-check {
+    width: 25%;
+    padding-left: 7.5%;
+
+    &:last-child {
+      margin-bottom: 52px;
+    }
+  }
+
+  .form__message {
+    min-height: 128px;
+    margin-bottom: 41px;
+  }
+
+  .form__legend-text {
+    &--desc {
+      padding-top: 20px;
+      padding-bottom: 14px;
+    }
+  }
+
+  .form__wrapper-btn {
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .form-require-none {
+    display: inline;
+  }
 }

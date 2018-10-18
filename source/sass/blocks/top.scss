@@ -1,17 +1,53 @@
 .top {
   @include page-padding;
-  height: 171px;
+  min-height: 170px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center 23%;
   background-size: cover;
-  padding-top: 30px;
+  padding-top: 29px;
   padding-bottom: 20px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .top__title {
   @include indent-zero;
-  @include font-settings(24px, 30px, 300);
+  @include font-settings(24px, 29px, 300);
   color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .top {
+    min-height: 329px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 27%;
+    background-size: 183%;
+    padding-top: 69px;
+    padding-bottom: 20px;
+  }
+
+  .top__title {
+    @include font-settings(50px, 60px, 300);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .top {
+    min-height: 394px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top;
+    background-size: auto;
+    padding-top: 173px;
+  }
+
+  .top__title {
+    width: 820px;
+    margin: 0 auto;
+
+    &--photo {
+      width: 400px;
+    }
+  }
 }

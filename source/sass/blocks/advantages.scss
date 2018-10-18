@@ -14,13 +14,17 @@
   @include indent-zero;
   color: $base-color;
   margin-bottom: 30px;
+
+  br {
+    display: none;
+  }
 }
 
 .advantages__list {
   @include list-none;
   @include page-padding;
-  padding-top: 53px;
   margin: 0;
+  padding-top: 81px;
 
   &::after {
     content: "";
@@ -33,18 +37,311 @@
 }
 
 .advantages__item {
-  margin-bottom: 35px;
+  margin-bottom: 31px;
+
+  &:last-child {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages__caption {
   @include font-settings(18px, 24px, bold);
   color: #000000;
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .advantages__description {
   @include font-settings(14px, 24px, normal);
   @include indent-zero;
   color: $base-color;
+}
+
+.advantages__effect {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: $tablet-width - 1) {
+  .advantages__wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__header {
+    padding-top: 49px;
+  }
+
+  .advantages__intro {
+    @include font-settings(40px, 48px, 300);
+    margin-bottom: 0;
+
+    br {
+      display: inline;
+    }
+
+    &--answer {
+      margin-bottom: 50px;
+    }
+  }
+
+  .advantages__wrapper {
+    @include page-padding;
+    display: flex;
+
+    &::before {
+      content: "";
+      align-self: center;
+      height: 481px;
+      width: 268px;
+      margin: 0 auto;
+      margin-right: 40px;
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 69px;
+    padding-right: 0;
+    padding-left: 0;
+    width: 50%;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .advantages__item {
+    min-height: 108px;
+    margin-bottom: 34px;
+
+    &:last-child {
+      margin-bottom: 19px;
+    }
+  }
+
+  .advantages__caption {
+    text-align: left;
+
+    &--day {
+      @include font-settings(30px, 36px, bold);
+      margin-bottom: 10px;
+    }
+
+    br {
+      display: inline;
+    }
+  }
+
+  .advantages__description {
+    text-align: left;
+
+    &--science {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+
+  .advantages__effect {
+    @include page-padding;
+    display: flex;
+    background-color: yellow;
+    padding-top: 95px;
+    padding-bottom: 84px;
+  }
+
+  .advantages__logo {
+    padding-left: 18px;
+    padding-top: 17px;
+    margin-right: 87px;
+    margin-left: auto;
+  }
+
+  .advantages__clock {
+    margin: 0 auto;
+    position: relative;
+    width: 202px;
+    height: 202px;
+    box-sizing: border-box;
+    border: solid 13px $insistent-color;
+    border-radius: 50%;
+
+    &::after {
+      @include font-settings(96px, 149px, bold);
+      color: $insistent-color;
+      content: "24";
+      position: absolute;
+      top: 8px;
+      left: 31px;
+    }
+  }
+
+  .advantages__study {
+    height: 100%;
+    min-width: 50%;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .advantages__link {
+    @include font-settings(14px, 24px, normal);
+    display: block;
+    text-align: left;
+    color: $insistent-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__intro {
+    @include font-settings(50px, 59px, 300);
+
+    &--answer {
+      margin-bottom: 74px;
+    }
+  }
+
+  .advantages__header {
+    padding-top: 69px;
+  }
+
+  .advantages__wrapper {
+    @include page-padding(10px);
+    display: flex;
+    width: 960px;
+    margin: 0 auto;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 40px;
+    padding: 0;
+    width: 100%;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .advantages__item {
+    min-height: 108px;
+    width: 240px;
+    margin-bottom: 19px;
+    margin-right: 78px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:first-child::before,
+    &:nth-child(2)::before,
+    &:nth-child(3)::before {
+      content: "";
+      display: block;
+      height: 302px;
+      width: 240px;
+      margin: 0 auto;
+      margin-bottom: 56px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:first-child::before {
+      background-image: url("../img/iphone-screen-1-desktop@1x.png");
+    }
+
+    &:nth-child(2)::before {
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    }
+
+    &:nth-child(3)::before {
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
+    }
+
+    &:last-child {
+      margin-bottom: 19px;
+    }
+  }
+
+  .advantages__caption {
+    @include font-settings(30px, 30px, bold);
+    text-align: center;
+    margin-bottom: 24px;
+
+    &--day {
+      @include font-settings(30px, 36px, bold);
+      text-align: left;
+      margin-bottom: 21px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  .advantages__description {
+    @include font-settings(18px, 30px, normal);
+    text-align: center;
+
+    &--science {
+      margin-bottom: 30px;
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  .advantages__wrap {
+    @include page-padding(10px);
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .advantages__effect {
+    display: flex;
+    align-items: center;
+    background-color: yellow;
+    padding: 114px 0 92px;
+  }
+
+  .advantages__logo {
+    padding: 0 23px;
+    margin-left: 0;
+    margin-right: 67px;
+  }
+
+  .advantages__clock {
+    margin-left: 0;
+    margin-right: auto;
+    width: 253px;
+    height: 253px;
+    border-width: 17px;
+
+    &::after {
+      @include font-settings(120px, 187px, bold);
+      content: "24";
+      left: 40px;
+    }
+  }
+
+  .advantages__study {
+    height: 100%;
+    min-width: 530px;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  .advantages__link {
+    @include font-settings(18px, 30px, normal);
+  }
 }

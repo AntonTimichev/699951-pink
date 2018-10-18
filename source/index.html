@@ -11,69 +11,76 @@
   <body>
 
     <header class="page-header">
-      <div class="page-header__top">
-        <a class="page-header__logo">
-          <span class="visually-hidden" aria-label="text-logo">PINK</span>
-        </a>
-        <a href="#" class="page-header__menu-btn">
-          <span class="visually-hidden">Меню</span>
-        </a>
+      <div class="page-header__wrapper">
+        <div class="page-header__top">
+          <a class="page-header__logo">
+            <span class="visually-hidden" aria-label="text-logo">PINK</span>
+          </a>
+          <a href="#" class="page-header__menu-btn">
+            <span class="visually-hidden">Меню</span>
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Приложение Pink</h1>
 
       <section class="promo">
-        <div class="promo__title">
-          <h2 class="visually-hidden">Где скачать приложение Pink</h2>
-        </div>
-        <div class="promo__app">
-          <a class="promo__btn button-act button-act--download" href="#">Скачать приложение</a>
-          <ul class="promo__list store-list">
-            <li class="store-list__item">
-              <a class="store-list__os store-list__os--apple" href="#">
-                <span class="visually-hidden">Apple</span>
-              </a>
-            </li>
-            <li class="store-list__item">
-              <a class="store-list__os store-list__os--android" href="#">
-                <span class="visually-hidden">Android</span>
-              </a>
-            </li>
-            <li class="store-list__item">
-              <a class="store-list__os store-list__os--microsoft" href="#">
-                <span class="visually-hidden">Microsoft</span>
-              </a>
-            </li>
-          </ul>
-          <p class="promo__gadget">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <div class="promo__container">
+          <div class="promo__title">
+            <h2 class="visually-hidden">Ссфлки для скачивания приложения Pink</h2>
+          </div>
+          <div class="promo__app">
+            <div class="promo__wrapper">
+              <p class="promo__slogan">Взгляните на жизнь иначе!</p>
+              <a class="promo__btn button-act button-act--download" href="#">Скачать приложение</a>
+              <ul class="promo__list store-list">
+                <li class="store-list__item">
+                  <a class="store-list__os store-list__os--apple" href="#">
+                    <span class="visually-hidden">Apple</span>
+                  </a>
+                </li>
+                <li class="store-list__item">
+                  <a class="store-list__os store-list__os--android" href="#">
+                    <span class="visually-hidden">Android</span>
+                  </a>
+                </li>
+                <li class="store-list__item">
+                  <a class="store-list__os store-list__os--microsoft" href="#">
+                    <span class="visually-hidden">Microsoft</span>
+                  </a>
+                </li>
+              </ul>
+              <p class="promo__gadget">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="advantages">
+        <header class="advantages__header">
+          <h2 class="visually-hidden">Функции приложения Pink</h2>
+          <p class="advantages__intro advantages__intro--question">Устали от серости мегаполиса?</p>
+          <p class="advantages__intro advantages__intro--answer">Нам есть, что вам<br> предложить!</p>
+        </header>
         <div class="advantages__wrapper">
-          <header class="advantages__header">
-            <h2 class="visually-hidden">Функции приложения Pink</h2>
-            <p class="advantages__intro advantages__intro--question">Устали от серости мегаполиса?</p>
-            <p class="advantages__intro advantages__intro--answer">Нам есть, что вам предложить</p>
-          </header>
           <ul class="advantages__list">
             <li class="advantages__item">
               <h3 class="advantages__caption">Поднимает настроение</h3>
@@ -83,68 +90,118 @@
               <h3 class="advantages__caption">Меняет мир вокруг</h3>
               <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
-            <li class="advantages__item advantages__item--image">
+            <li class="advantages__item">
               <h3 class="advantages__caption">Заводит новых друзей</h3>
-              <p class="advantages__description">Ставтье лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
+        </div>
+        <div class="advantages__wrap">
+          <div class="advantages__effect">
+            <div class="advantages__logo">
+              <div class="advantages__clock"></div>
+            </div>
+            <div class="advantages__study">
+              <h3 class="advantages__caption advantages__caption--day">Эффект<br> на 24 часа!</h3>
+              <p class="advantages__description advantages__description--science">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+              </p>
+              <a class="advantages__link" href="#">Узнать больше об исследовании</a>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="reviews">
+        <h2 class="visually-hidden">Отзывы пользователей</h2>
         <div class="reviews__wrapper slider">
-          <h2 class="visually-hidden">Отзывы пользователей</h2>
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
               <h3 class="reviews__author-name">Николай Петров</h3>
+              <span class="reviews__age">25 лет, водитель трамвая</span>
               <p class="reviews__text">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
             </blockquote>
           </div>
-          <div class="reviews__toggles slider__toggles">
-            <input type="radio" id="review-1" class="slider__toggle" value="1">
-            <input type="radio" id="review-2" class="slider__toggle" value="2">
-            <input type="radio" id="review-3" class="slider__toggle" value="3">
-            <label for="review-1" class="slider__sign"></label>
-            <label for="review-2" class="slider__sign"></label>
-            <label for="review-3" class="slider__sign"></label>
-          </div>
+        </div>
+        <div class="reviews__toggles slider__toggles">
+          <input type="radio" id="review-1" class="slider__toggle" name="review-slide" value="1">
+          <input type="radio" id="review-2" class="slider__toggle" name="review-slide" value="2">
+          <input type="radio" id="review-3" class="slider__toggle" name="review-slide" value="3">
+          <label for="review-1" class="slider__sign"></label>
+          <label for="review-2" class="slider__sign"></label>
+          <label for="review-3" class="slider__sign"></label>
         </div>
       </section>
 
       <section class="rates">
+        <h2 class="visually-hidden">Тарифы</h2>
         <div class="rates__wrapper slider">
-          <h2 class="visually-hidden">Тарифы</h2>
           <table class="rates__list slider__list">
             <tr class="rates__item rates__item--top">
+              <td class="rates__caption rates__caption--none"></td>
+              <td class="rates__caption">
+                <h3 class="rates__title">База</h3>
+                <span class="rates__price">1,99 USD</span>
+              </td>
               <td class="rates__caption">
                 <h3 class="rates__title">Стандарт</h3>
-                <span class="rates__price">3,99 USD</span>
+                <span class="rates__price rates__price--hit">3,99 USD</span>
+              </td>
+              <td class="rates__caption">
+                <h3 class="rates__title">Анлим</h3>
+                <span class="rates__price">9,99 USD</span>
               </td>
             </tr>
             <tr class="rates__item">
-              <td class="rates__function rates__function--on">Розовый фильтр</td>
+              <td class="rates__function rates__function--mob">Розовый фильтр</td>
+              <td class="rates__function">
+                <span>Розовый фильтр</span>
+              </td>
+              <td class="rates__function">
+                <span>Розовый фильтр</span>
+              </td>
+              <td class="rates__function">
+                <span>Розовый фильтр</span>
+              </td>
             </tr>
             <tr class="rates__item">
-              <td class="rates__function rates__function--on">Смайлики</td>
+              <td class="rates__function rates__function--mob">Смайлики</td>
+              <td class="rates__function">
+                <span>Смайлики</span>
+              </td>
+              <td class="rates__function">
+                <span>Смайлики</span>
+              </td>
+              <td class="rates__function">
+                <span>Смайлики</span>
+              </td>
             </tr>
             <tr class="rates__item">
-              <td class="rates__function rates__function--off">Комментарии</td>
+              <td class="rates__function rates__function--mob">Комментарии</td>
+              <td class="rates__function">
+                <span>Комментарии</span>
+              </td>
+              <td class="rates__function">
+                <span>Комментарии</span>
+              </td>
+              <td class="rates__function">
+                <span>Комментарии</span>
+              </td>
             </tr>
           </table>
-          <div class="rates__toggles slider__toggles">
-            <input type="radio" id="rates-1" class="rates__toggle" value="1">
-            <input type="radio" id="rates-2" class="rates__toggle" value="2">
-            <input type="radio" id="rates-3" class="rates__toggle" value="3">
-            <label for="rates-1" class="rates__sign"></label>
-            <label for="rates-2" class="rates__sign"></label>
-            <label for="rates-3" class="rates__sign"></label>
-          </div>
+        </div>
+        <div class="rates__toggles slider__toggles">
+          <input type="radio" id="rates-1" class="rates__toggle" name="rates-slide" value="1">
+          <input type="radio" id="rates-2" class="rates__toggle" name="rates-slide" value="2">
+          <input type="radio" id="rates-3" class="rates__toggle" name="rates-slide" value="3">
+          <label for="rates-1" class="rates__sign"></label>
+          <label for="rates-2" class="rates__sign"></label>
+          <label for="rates-3" class="rates__sign"></label>
         </div>
       </section>
 
       <section class="contacts">
+        <h2 class="visually-hidden">Контакты разработчиков</h2>
         <div class="contacts__wrapper">
-          <h2 class="visually-hidden">Контакты разработчиков</h2>
           <header class="contacts__intro">
             <p class="contacts__text">Остались вопросы?</p>
             <p class="contacts__text">Свяжитесь с нами</p>
@@ -160,15 +217,46 @@
             </li>
             <li class="contacts__item">
               <b class="contacts__action">Приезжайте в гости:</b>
-              <span class="contacts__note">Улица Большая Конюшенная, 19/8</span>
+              <span class="contacts__note">Ул. Большая Конюшенная, 19/8</span>
             </li>
           </ul>
         </div>
         <div class="contacts__map">
-          <iframe class="contacts__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1392.9440897246695!2d30.322747851307753!3d59.93921821781792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538925095906" width="320" height="203" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe class="contacts__iframe-mob" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1392.9440897246695!2d30.322747851307753!3d59.93921821781792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538925095906" width="100%" height="203" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </section>
     </main>
+
+    <footer class="page-footer page-footer--mob">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo">
+          <span class="logo__text" aria-label="text-logo">PINK</span>
+        </a>
+        <ul class="page-footer__list social-list">
+          <li class="social-list__item">
+            <a class="social-list__btn social-list__btn--tw" href="#">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__btn social-list__btn--fb" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__btn social-list__btn--ytb" href="#">
+              <span class="visually-hidden">Youtube</span>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright">
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="page-footer__text">Разработано</span>
+            <span class="page-footer__logo-company">HTML Academy</span>
+          </a>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
