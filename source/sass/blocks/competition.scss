@@ -1,10 +1,13 @@
+.competition {
+  position: relative;
+}
+
 .competition__intro {
   @include page-padding;
   padding-top: 45px;
   padding-bottom: 17px;
   max-width: 500px;
   margin: 0 auto;
-  border-bottom: solid 1px #ffffff;
   box-sizing: border-box;
 
   br {
@@ -25,6 +28,59 @@
   }
 }
 
+.competition__popup {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-color: yellow;
+  margin-bottom: 20px;
+  min-height: 289px;
+  width: 320px;
+
+  &--ok {
+    top: 63%;
+  }
+
+  &--err {
+    top: 42%;
+  }
+}
+
+.competition__wrap-message {
+  padding: 40px 20px 38px;
+
+  &--ok {
+    padding-bottom: 30px;
+  }
+}
+
+.competition__title-message {
+  @include font-settings(18px, 24px, bold);
+  color: #000000;
+  margin: 0 0 26px;
+
+  br {
+    display: none;
+  }
+}
+
+.competition__desc-message {
+  @include font-settings(14px, 24px, normal);
+  @include indent-zero;
+  color: $base-color;
+}
+
+.competition__wrap-btn {
+  box-sizing: border-box;
+
+  &--close {
+    min-height: 163px;
+    padding-top: 50px;
+    background-color: $texture-color;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .competition__intro {
     max-width: 750px;
@@ -42,6 +98,51 @@
   .competition__text-intro {
     font-size: 18px;
   }
+
+  .competition__popup {
+    width: 460px;
+
+    &--ok {
+      top: 39%;
+    }
+
+    &--err {
+      top: 19%;
+    }
+  }
+
+  .competition__wrap-message {
+    padding: 36px 0 38px;
+    width: 310px;
+    margin: 0 auto;
+
+    &--ok {
+      padding-bottom: 30px;
+    }
+  }
+
+  .competition__title-message {
+    @include font-settings(30px, 40px, bold);
+    margin: 0 0 22px;
+
+    br {
+      display: inline;
+    }
+  }
+
+  .competition__desc-message {
+    font-size: 18px;
+  }
+
+  .competition__wrap-btn {
+    min-height: 118px;
+    box-sizing: border-box;
+
+    &--close {
+      min-height: 163px;
+      padding-top: 52px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -56,5 +157,33 @@
     span {
       display: inline;
     }
+  }
+
+  .competition__popup {
+    width: 780px;
+
+    &--ok {
+      top: 60%;
+    }
+
+    &--err {
+      top: 29%;
+    }
+  }
+
+  .competition__wrap-message {
+    width: 420px;
+  }
+
+  .competition__title-message {
+    br {
+      display: none;
+    }
+  }
+
+  .competition__wrap-btn {
+    min-height: 163px;
+    background-color: $texture-color;
+    padding-top: 52px;
   }
 }

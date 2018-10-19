@@ -51,7 +51,7 @@
             <br><span>Пожалуйста, заполните форму ниже:</span>
           </p>
         </div>
-        <form class="competition__form form">
+        <form class="competition__form form" method="post" enctype="multipart/form-data" action="#">
           <fieldset class="form__group form__group--name">
             <div class="form__user-name" role="group">
               <label for="surname" class="form__caption-input">
@@ -124,24 +124,26 @@
             </div>
           </fieldset>
           <div class="form__wrapper-btn form__wrapper-btn--submit">
-            <button type="submit" class="form__button">Отправить форму</button>
+            <button type="submit" class="form__send-btn button-form">Отправить форму</button>
             <span class="form__required-field"><sup class="form__star">*</sup> &#8212; обязательные <span class="form-require-none">для заполнения</span> поля</span>
           </div>
         </form>
-        <div class="competition__popup-err visually-hidden">
+        <div class="competition__popup competition__popup--err visually-hidden">
           <div class="competition__wrap-message">
-            <h3 class="competition__title-message">Что-то пошло не так!</h3>
+            <h3 class="competition__title-message">Что-то пошло<br> не так!</h3>
             <p class="competition__desc-message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
           </div>
-          <button type="button" class="form__button">Ок</button>
+          <div class="competition__wrap-btn">
+            <button type="button" class="button-form">Ок</button>
+          </div>
         </div>
-        <div class="competition__popup-ok visually-hidden">
-          <div class="competition__wrap-message">
+        <div class="competition__popup competition__popup--ok visually-hidden">
+          <div class="competition__wrap-message competition__wrap-message--ok">
             <h3 class="competition__title-message">Ваша заявка отправлена</h3>
             <p class="competition__desc-message">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
           </div>
           <div class="competition__wrap-btn competition__wrap-btn--close">
-            <button type="button" class="form__button">Закрыть окно</button>
+            <button type="button" class="button-form button-form--close">Закрыть окно</button>
           </div>
         </div>
       </section>

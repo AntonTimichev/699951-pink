@@ -6,6 +6,7 @@
   padding: 14px 0;
   box-sizing: border-box;
   max-width: 300px;
+  width: 280px;
   height: 55px;
   border: solid 3px;
   border-radius: 50px;
@@ -13,17 +14,45 @@
   &--download {
     color: #ffffff;
     border-color: #ffffff;
+
+    &:hover {
+      background-color: #ffffff;
+      color: $insistent-color;
+    }
+
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
+    }
   }
 
   &--post {
     color: $insistent-color;
     border-color: $insistent-color;
+
+    &:hover {
+      background-color: $insistent-color;
+      color: #ffffff;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &--cancel {
     color: $base-color;
     border-color: $base-color;
     opacity: 0.1;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.3;
+      background-color: $base-color;
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 

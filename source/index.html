@@ -113,29 +113,29 @@
 
       <section class="reviews">
         <h2 class="visually-hidden">Отзывы пользователей</h2>
-        <div class="reviews__wrapper slider">
-          <div class="reviews__list slider__list">
-            <blockquote class="reviews__item slider__item">
+        <div class="reviews__wrapper">
+          <div class="reviews__list">
+            <blockquote class="reviews__item">
               <h3 class="reviews__author-name">Николай Петров</h3>
               <span class="reviews__age">25 лет, водитель трамвая</span>
-              <p class="reviews__text">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
+              <p class="reviews__text">&#171; Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии! &#187;</p>
             </blockquote>
           </div>
         </div>
-        <div class="reviews__toggles slider__toggles">
-          <input type="radio" id="review-1" class="slider__toggle" name="review-slide" value="1">
-          <input type="radio" id="review-2" class="slider__toggle" name="review-slide" value="2">
-          <input type="radio" id="review-3" class="slider__toggle" name="review-slide" value="3">
+        <div class="reviews__toggles slider">
+          <input type="radio" id="review-1" class="slider__toggle visually-hidden" name="review-slide" value="1" checked>
           <label for="review-1" class="slider__sign"></label>
+          <input type="radio" id="review-2" class="slider__toggle visually-hidden" name="review-slide" value="2">
           <label for="review-2" class="slider__sign"></label>
+          <input type="radio" id="review-3" class="slider__toggle visually-hidden" name="review-slide" value="3">
           <label for="review-3" class="slider__sign"></label>
         </div>
       </section>
 
       <section class="rates">
         <h2 class="visually-hidden">Тарифы</h2>
-        <div class="rates__wrapper slider">
-          <table class="rates__list slider__list">
+        <div class="rates__wrapper">
+          <table class="rates__list">
             <tr class="rates__item rates__item--top">
               <td class="rates__caption rates__caption--none"></td>
               <td class="rates__caption">
@@ -189,13 +189,13 @@
             </tr>
           </table>
         </div>
-        <div class="rates__toggles slider__toggles">
-          <input type="radio" id="rates-1" class="rates__toggle" name="rates-slide" value="1">
-          <input type="radio" id="rates-2" class="rates__toggle" name="rates-slide" value="2">
-          <input type="radio" id="rates-3" class="rates__toggle" name="rates-slide" value="3">
-          <label for="rates-1" class="rates__sign"></label>
-          <label for="rates-2" class="rates__sign"></label>
-          <label for="rates-3" class="rates__sign"></label>
+        <div class="rates__toggles slider">
+          <input type="radio" id="rates-1" class="slider__toggle visually-hidden" name="rates-slide" value="1">
+          <label for="rates-1" class="slider__sign"></label>
+          <input type="radio" id="rates-2" class="slider__toggle visually-hidden" name="rates-slide" value="2" checked>
+          <label for="rates-2" class="slider__sign"></label>
+          <input type="radio" id="rates-3" class="slider__toggle visually-hidden" name="rates-slide" value="3">
+          <label for="rates-3" class="slider__sign"></label>
         </div>
       </section>
 
@@ -213,7 +213,7 @@
             </li>
             <li class="contacts__item">
               <b class="contacts__action">Пишите:</b>
-              <a class="contacts__note" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a class="contacts__note contacts__note--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
             <li class="contacts__item">
               <b class="contacts__action">Приезжайте в гости:</b>

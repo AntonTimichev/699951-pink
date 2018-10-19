@@ -28,7 +28,7 @@
             <li class="site-list__item site-list__item--active">
               <a class="site-list__link">Фотографии</a>
             </li>
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a class="site-list__link" href="form.html">Конкурс</a>
             </li>
             <li class="site-list__item">
@@ -135,38 +135,26 @@
           <div class="filter__wrap-img">
             <img class="filter__img" src="http://placehold.it/280x374" width="280" height="374" alt="Зимняя дорога">
           </div>
-          <div class="filter__controls">
-            <ul class="filter__settings">
-              <li class="filter__set">
-                <a class="filter__clip" href="#">
-                  <span class="visually-hidden">Обрезать</span>
-                </a>
-                <div class="filter__range">
-                  <div class="filter__scale filter__scale--clip"></div>
-                </div>
-              </li>
-              <li class="filter__set">
-                <a class="filter__paint" href="#">
-                  <span class="visually-hidden">Заливка</span>
-                </a>
-                <div class="filter__range filter__range--choice">
-                  <div class="filter__scale filter__scale--paint"></div>
-                </div>
-              </li>
-              <li class="filter__set">
-                <a class="filter__contrast" href="#">
-                  <span class="visually-hidden">Регулировка контрастности</span>
-                </a>
-                <div class="filter__range">
-                  <div class="filter__scale filter__scale--contrast"></div>
-                </div>
-              </li>
-            </ul>
+          <form method="post" enctype="multipart/form-data" action="#" class="filter__controls">
+            <fieldset class="filter__settings">
+              <label for="clip" class="filter__set filter__set--clip">
+                <span class="filter__icon filter__icon--active"></span>
+                <input type="range" id="clip" class="filter__range" name="clip" min="0" max="100" value="79">
+              </label>
+              <label for="paint" class="filter__set filter__set--paint">
+                <span class="filter__icon"></span>
+                <input type="range" id="paint" class="filter__range" name="paint" min="0" max="100" value="13">
+              </label>
+              <label for="contrast" class="filter__set filter__set--contrast">
+                <span class="filter__icon"></span>
+                <input type="range" id="contrast" class="filter__range" name="contrast" min="0" max="100" value="51">
+              </label>
+            </fieldset>
             <div class="filter-btn">
-              <a class="filter-btn__item button-act button-act--post" href="#">Запостить</a>
-              <a class="filter-btn__item button-act button-act--cancel" href="#">Отмена</a>
+              <button type="submit" class="filter-btn__item button-act button-act--post">Запостить</button>
+              <button type="reset" class="filter-btn__item button-act button-act--cancel">Отмена</button>
             </div>
-          </div>
+          </form>
         </div>
       </section>
     </main>

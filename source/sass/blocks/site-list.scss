@@ -17,6 +17,14 @@
   text-decoration: none;
   display: inline-block;
   color: #ffffff;
+
+  &:hover[href] {
+    color: $insistent-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -29,6 +37,7 @@
   }
 
   .site-list__item {
+    position: relative;
     padding: 18px 0 25px;
     box-sizing: border-box;
     border: none;
@@ -40,6 +49,15 @@
 
     &:nth-child(4n) {
       margin-right: 0;
+    }
+
+    &--active::after {
+      content: "";
+      display: block;
+      width: 100%;
+      border: solid 1px #ffffff;
+      box-sizing: border-box;
+      margin-top: 10px;
     }
   }
 }

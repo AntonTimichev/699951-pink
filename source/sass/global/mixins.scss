@@ -18,8 +18,7 @@
   padding-right: $indent;
 }
 
-@mixin fieldset() {
-  //display: block;
+@mixin fieldset {
   margin: 0;
   text-align: left;
 }
@@ -51,5 +50,18 @@
 
   &::-ms-input-placeholder {
     @content;
+  }
+}
+
+@mixin range-thumb {
+  border: solid 2px $insistent-color;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  &:active {
+    background-color: $insistent-color;
   }
 }
