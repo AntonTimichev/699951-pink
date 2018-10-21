@@ -429,8 +429,6 @@
 
   .form__group {
     &:not(&--name) {
-      box-sizing: border-box;
-      border: solid 2px #e5e5e5;
       margin-bottom: 38px;
     }
 
@@ -439,22 +437,9 @@
       margin: 0;
     }
 
-    &--act {
-      order: 4;
-      background-color: #ffffff;
-    }
-
-    &--tel {
-      order: 3;
-    }
-
     &--app {
       width: 46.2%;
       margin: 0;
-    }
-
-    &--desc {
-      order: 5;
     }
   }
 

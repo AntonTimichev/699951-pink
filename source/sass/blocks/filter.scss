@@ -40,19 +40,28 @@
     .filter__range {
       position: absolute;
       left: -17px;
-      top: 82px;
+      top: 52px;
+
+      @supports (background-blend-mode: hue) {
+        left: -17px;
+        top: 82px;
+      }
     }
   }
 
   &--paint {
     .filter__range {
       display: none;
+      left: -17px;
+      top: 82px;
     }
   }
 
   &--contrast {
     .filter__range {
       display: none;
+      left: -17px;
+      top: 82px;
     }
   }
 
@@ -94,7 +103,7 @@
     border-color: transparent;
     border-width: 9px 0;
     color: transparent;
-    margin-top: 9px;
+    margin-top: 10px;
   }
 
   input[type="range"]::-ms-fill-lower {

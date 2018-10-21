@@ -3,6 +3,10 @@
   padding-top: 93px;
   background-color: $texture-color;
   width: 100%;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 1200px 95px;
 }
 
 .rates__wrapper {
@@ -16,9 +20,20 @@
   border-collapse: collapse;
   background-color: #ffffff;
   width: 100%;
+
+  td {
+    min-width: 281px;
+    border-top: none;
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+  }
 }
 
 .rates__item {
+  display: flex;
+
   &--top {
     background-color: $base-color;
     border-bottom: none;
@@ -26,12 +41,33 @@
 }
 
 .rates__caption {
+  position: relative;
   color: #ffffff;
   box-sizing: border-box;
   padding: 16px 20px 22px;
   border: solid 2px #e5e5e5;
-  border-top: none;
-  min-width: 281px;
+  //min-width: 281px;
+
+  &--hit::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 74px;
+    height: 74px;
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    background-size: 74px auto;
+  }
+
+  &--hit::before {
+    content: "ХИТ";
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 10px;
+    transform: rotate(-45deg);
+  }
 }
 
 .rates__title {
@@ -42,44 +78,38 @@
 
 .rates__price {
   @include font-settings(24px, 30px, 300);
-  position: relative;
-
-  &--hit::before {
-    content: "ХИТ";
-    position: absolute;
-    left: -90px;
-    top: -50px;
-  }
 }
 
 .rates__function {
   @include font-settings;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-transform: uppercase;
-  text-align: left;
+  //text-align: left;
   padding: 14px 22px;
   box-sizing: border-box;
-  min-width: 210px;
+  //min-width: 281px;
   border: solid 2px #e5e5e5;
-  border-top: none;
-
-  &::after {
-    content: "X";
-    position: absolute;
-    top: 21%;
-    right: 9%;
-  }
 
   span {
     display: inline;
   }
 }
 
+.rates__func-on {
+  fill: #3dc644;
+}
+
+.rates__func-off {
+  fill: $insistent-color;
+}
+
 .rates__toggles {
   display: block;
   background-color: $texture-color;
-  padding-top: 37px;
-  padding-bottom: 46px;
+  padding-top: 40px;
+  padding-bottom: 48px;
 }
 
 @media (min-width: $tablet-width) {
@@ -91,21 +121,12 @@
     position: relative;
     text-transform: inherit;
     padding: 8px 10px 7px 13px;
-    min-width: 150px;
+
+    &:not(.rates__function--mob) {
+      justify-content: center;
+    }
 
     span {
-      display: none;
-    }
-
-    &::after {
-      content: "X";
-      position: absolute;
-      top: 21%;
-      right: 45%;
-      display: inline-block;
-    }
-
-    &--mob::after {
       display: none;
     }
   }
@@ -121,12 +142,30 @@
     transform: translateX(0);
     width: 100%;
     margin-bottom: 70px;
+
+    td {
+      flex-grow: 1;
+      min-width: 155px;
+    }
   }
 
   .rates__caption {
-    min-width: 150px;
     padding: 15px 15px 9px;
     border-bottom: none;
+
+    &--hit::after {
+      content: "";
+      width: 61px;
+      height: 61px;
+      background-image: url("../img/bg-hit-tablet.svg");
+      background-size: 61px auto;
+    }
+
+    &--hit::before {
+      content: "ХИТ";
+      top: 20px;
+      left: 5px;
+    }
 
     &--none {
       background-color: $texture-color;
@@ -141,13 +180,6 @@
 
   .rates__price {
     font-size: 18px;
-
-    &--hit::before {
-      content: "ХИТ";
-      position: absolute;
-      top: -50px;
-      left: -30px;
-    }
   }
 
   .rates__toggles {
@@ -158,6 +190,7 @@
 @media (min-width: $desktop-width) {
   .rates {
     padding-top: 148px;
+    background-size: 100%;
   }
 
   .rates__wrapper {
@@ -169,6 +202,10 @@
 
   .rates__list {
     margin-bottom: 95px;
+
+    td {
+      min-width: 234px;
+    }
   }
 
   .rates__title {
@@ -183,6 +220,20 @@
     min-width: 233px;
     padding: 16px 20px 22px;
     border-bottom: none;
+
+    &--hit::after {
+      content: "";
+      width: 74px;
+      height: 74px;
+      background-image: url("../img/bg-hit.svg");
+      background-size: 74px auto;
+    }
+
+    &--hit::before {
+      content: "ХИТ";
+      top: 25px;
+      left: 10px;
+    }
   }
 
   .rates__function {
