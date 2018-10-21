@@ -52,17 +52,28 @@
 
 .contacts__map {
   height: 203px;
+  position: relative;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
-}
+  background-size: 320px auto;
 
-.contacts__iframe-tab {
-  display: none;
-}
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
 
-.contacts__iframe-desc {
-  display: none;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: auto;
+    height: 123px;
+    width: 100%;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 700px;
+  }
 }
 
 .re {
@@ -75,9 +86,14 @@
     @include font-settings(40px, 47px, 300);
   }
 
+  .contacts__wrapper {
+    padding-top: 46px;
+  }
+
   .contacts__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .contacts__item {
@@ -88,14 +104,14 @@
     }
 
     &:last-child {
-      flex-grow: 1;
+      //flex-grow: 1;
       width: 260px;
-      margin-bottom: 32px;
+      margin-bottom: 26px;
     }
   }
 
   .contacts__action {
-    margin: 0 auto 5px;
+    margin: 0 auto 10px;
   }
 
   .contacts__note {
@@ -112,9 +128,26 @@
     background-image: url("../img/bg-map-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 700px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
+
+    &::before {
+      content: "";
+      top: -28px;
+      left: auto;
+      height: 100px;
+      width: 100%;
+      background-image: url("../img/bg-triangle-white-footer.svg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 1200px;
+    }
   }
 
-  .contacts__iframe-mob {
+  .contacts__iframe {
     height: 377px;
   }
 }
@@ -174,9 +207,27 @@
     background-image: url("../img/bg-map-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 1200px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
+
+    &::before {
+      content: "";
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 130px;
+      width: 1440px;
+      background-image: url("../img/bg-triangle-white-footer.svg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 1440px;
+    }
   }
 
-  .contacts__iframe-mob {
+  .contacts__iframe {
     height: 504px;
   }
 }
