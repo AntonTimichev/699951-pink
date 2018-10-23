@@ -41,6 +41,8 @@
 }
 
 .rates__caption {
+  display: flex;
+  flex-direction: column;
   position: relative;
   color: #ffffff;
   box-sizing: border-box;
@@ -106,7 +108,6 @@
 }
 
 .rates__toggles {
-  display: block;
   background-color: $texture-color;
   padding-top: 40px;
   padding-bottom: 48px;

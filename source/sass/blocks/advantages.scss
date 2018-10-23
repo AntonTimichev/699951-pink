@@ -167,16 +167,23 @@
   .advantages__effect {
     @include page-padding;
     display: flex;
-    background-color: yellow;
-    padding-top: 95px;
-    padding-bottom: 84px;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 60px;
+    padding-bottom: 63px;
   }
 
   .advantages__logo {
-    padding-left: 18px;
-    padding-top: 17px;
-    margin-right: 87px;
+    padding-top: 55px;
+    margin-right: 70px;
     margin-left: auto;
+    width: 238px;
+    height: 276px;
+    box-sizing: border-box;
+
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 238px auto;
   }
 
   .advantages__clock {
@@ -185,7 +192,7 @@
     width: 202px;
     height: 202px;
     box-sizing: border-box;
-    border: solid 13px $insistent-color;
+    border: solid 14px $insistent-color;
     border-radius: 50%;
 
     &::after {
@@ -203,6 +210,7 @@
     min-width: 50%;
     width: 50%;
     margin: 0 auto;
+    padding-top: 10px;
   }
 
   .advantages__link {
@@ -343,19 +351,22 @@
   .advantages__effect {
     display: flex;
     align-items: center;
-    background-color: yellow;
-    padding: 114px 0 92px;
+    background-color: $texture-color;
+    padding: 47px 0 67px;
   }
 
   .advantages__logo {
-    padding: 0 23px;
+    //padding: 0 23px;
     margin-left: 0;
     margin-right: 67px;
+    padding-top: 70px;
+    width: 298px;
+    height: 345px;
+    background-size: 298px auto;
   }
 
   .advantages__clock {
-    margin-left: 0;
-    margin-right: auto;
+    margin: 0 auto;
     width: 253px;
     height: 253px;
     border-width: 17px;
@@ -372,6 +383,7 @@
     min-width: 530px;
     margin-left: 0;
     margin-right: 20px;
+    padding-top: 43px;
   }
 
   .advantages__link {

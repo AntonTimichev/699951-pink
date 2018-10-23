@@ -12,12 +12,13 @@
 
 .posts__wrap-img {
   margin: 0 auto;
-  outline: solid 2px yellowgreen;
+  //outline: solid 2px yellowgreen;
 }
 
 .posts__img {
   display: block;
   margin: 0 auto;
+  height: 180px;
 }
 
 .posts__container {
@@ -30,6 +31,24 @@
 }
 
 .posts__item--panorama {
+  position: relative;
+
+  .posts__title {
+    @include font-settings(12px, 24px, bold);
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding-top: 6px;
+    text-transform: uppercase;
+    width: 140px;
+    height: 36px;
+    background-color: $insistent-color;
+    box-sizing: border-box;
+  }
+
   .posts__author {
     @include page-padding;
   }
@@ -37,6 +56,10 @@
   .posts__wrapper {
     padding: 18px 10px 20px 17px;
     background-color: $texture-color;
+  }
+
+  .posts__img {
+    height: 137px;
   }
 }
 
@@ -58,15 +81,34 @@
 
 .posts__like {
   @include font-settings(12px, 24px, normal);
+  display: flex;
+  align-items: center;
   text-transform: uppercase;
   color: $insistent-color;
   margin: 0;
+}
+
+.posts__btn-like {
+  fill: $insistent-color;
+  margin-right: 18px;
+  cursor: pointer;
+  order: -1;
+}
+
+.posts__text {
+  margin-right: 3px;
 }
 
 @media (min-width: $tablet-width) {
   .posts {
     display: flex;
     flex-direction: column;
+  }
+
+  .posts__btn-like {
+    margin-right: 0;
+    margin-left: 18px;
+    order: 3;
   }
 
   .posts__container {
@@ -86,12 +128,16 @@
       }
     }
 
+    .posts__img {
+      height: 300px;
+    }
+
     .posts__author {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       flex-grow: 1;
-      padding: 22px 27px 24px;
+      padding: 22px 30px 24px 27px;
       min-height: 155px;
       min-width: 300px;
       box-sizing: border-box;
@@ -100,11 +146,19 @@
     .posts__like {
       margin-top: auto;
     }
+
+    .posts__amount-likes {
+      margin-right: auto;
+    }
   }
 
   .posts__item--panorama {
     width: 100%;
     margin: 0 auto 51px;
+
+    .posts__title {
+      top: 57px;
+    }
 
     .posts__wrap-img {
       min-width: 660px;
@@ -120,7 +174,7 @@
       flex-wrap: wrap;
       align-items: baseline;
       justify-content: space-between;
-      padding: 24px 27px 16px;
+      padding: 24px 30px 16px 27px;
       background-color: $texture-color;
     }
 
@@ -171,9 +225,18 @@
     .posts__wrap-img {
       height: 400px;
     }
+
+    .posts__img {
+      height: 400px;
+    }
   }
 
   .posts__item--panorama {
+    .posts__title {
+      top: 54px;
+      right: 130px;
+    }
+
     .posts__author {
       @include page-padding(10px);
       min-height: 96px;
