@@ -42,10 +42,7 @@
 }
 
 .promo__list {
-  margin-top: 0;
-  margin-bottom: 21px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 21px;
 }
 
 .promo__app {
@@ -191,9 +188,6 @@
 
   .promo__slogan {
     @include font-settings(50px, 60px, 300);
-    //display: inline-block;
-    //color: #ffffff;
-    //margin-top: 0;
     margin-bottom: 52px;
     padding: 0 25px;
   }

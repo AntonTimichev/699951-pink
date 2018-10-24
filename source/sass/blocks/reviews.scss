@@ -1,6 +1,5 @@
 .reviews {
   width: 100%;
-  outline: solid 3px green;
 }
 
 .reviews__author-name {
@@ -35,7 +34,6 @@
 }
 
 .reviews__wrapper {
-  outline: solid 3px green;
   width: 320px;
   height: 100%;
   overflow: hidden;
@@ -48,6 +46,10 @@
   width: 300%;
 }
 
+.reviews__btn-left,
+.reviews__btn-right {
+  display: none;
+}
 
 @media (min-width: $tablet-width) {
   .reviews__age {
@@ -87,6 +89,7 @@
 @media (min-width: $desktop-width) {
   .reviews {
     @include page-padding(10px);
+    position: relative;
     width: 960px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -103,12 +106,72 @@
 
   .reviews__wrapper {
     width: 820px;
+    margin-bottom: 0;
+  }
+
+  .reviews__btn-left,
+  .reviews__btn-right {
+    position: absolute;
+    top: 51%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 22px;
+    height: 41px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .reviews__btn-left {
+    left: 10px;
+  }
+
+  .reviews__btn-right {
+    right: 10px;
+  }
+
+  .reviews__left,
+  .reviews__right {
+    flex-grow: 1;
+    fill: rgba(0, 0, 0, 0.3);
+  }
+
+  .reviews__btn-left:hover .reviews__left {
+    fill: rgba(0, 0, 0, 0.6);
+  }
+
+  .reviews__btn-right:hover .reviews__right {
+    fill: rgba(0, 0, 0, 0.6);
+  }
+
+  .reviews__btn-left:active .reviews__left {
+    fill: rgba(0, 0, 0, 0.1);
+  }
+
+  .reviews__btn-right:active .reviews__right {
+    fill: rgba(0, 0, 0, 0.1);
   }
 
   .reviews__item {
+    position: relative;
     padding-top: 184px;
     padding-bottom: 41px;
     width: 820px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 79px;
+      height: 63px;
+      background-image: url("../img/icon-quotes.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 79px 63px;
+    }
   }
 
   .reviews__toggles {

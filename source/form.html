@@ -9,12 +9,22 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <script src="js/picturefill.js"></script>
+    <script src="js/svgxuse.js"></script>
 
     <header class="page-header">
       <div class="page-header__wrapper">
         <div class="page-header__top">
-          <a class="page-header__logo" href="index.html">
-            <span class="visually-hidden" aria-label="text-logo">PINK</span>
+          <a class="page-header__logo logo" href="index.html">
+            <svg class="logo__mob-header" width="74" height="23">
+              <use xlink:href="img/sprite.svg#logo-white-mob"></use>
+            </svg>
+            <svg class="logo__tab-header" width="146" height="40">
+              <use xlink:href="img/sprite.svg#logo-white-tab"></use>
+            </svg>
+            <svg class="logo__desc-header" width="146" height="40">
+              <use xlink:href="img/sprite.svg#logo-white-desc"></use>
+            </svg>
           </a>
           <a href="#" class="page-header__menu-btn">
             <span class="visually-hidden">Меню</span>
@@ -73,18 +83,18 @@
               <span>Ваши безбашенные достижения в путешествии</span>
             </legend>
             <div class="form__actions" role="group">
-              <input type="checkbox" class="form__checkbox-field" id="selfie" checked>
-              <label for="selfie" class="form__caption-check">Сделал селфи с акулой</label>
-              <input type="checkbox" class="form__checkbox-field" id="tan" checked>
-              <label for="tan" class="form__caption-check">Обгорел на пляже</label>
-              <input type="checkbox" class="form__checkbox-field" id="chack">
-              <label for="chack" class="form__caption-check">Видел Чака Норриса</label>
-              <input type="checkbox" class="form__checkbox-field" id="souvenir">
-              <label for="souvenir" class="form__caption-check">Накупил сувениров</label>
-              <input type="checkbox" class="form__checkbox-field" id="tower" checked>
-              <label for="tower" class="form__caption-check">Удержал башню</label>
-              <input type="checkbox" class="form__checkbox-field" id="chaos">
-              <label for="chaos" class="form__caption-check">Разгромил отель</label>
+              <input type="checkbox" class="form__check-field visually-hidden" id="selfie" checked>
+              <label for="selfie" class="form__check-name form__check-name--check">Сделал селфи с акулой</label>
+              <input type="checkbox" class="form__check-field visually-hidden" id="tan" checked>
+              <label for="tan" class="form__check-name form__check-name--check">Обгорел на пляже</label>
+              <input type="checkbox" class="form__check-field visually-hidden" id="chack">
+              <label for="chack" class="form__check-name form__check-name--check">Видел Чака Норриса</label>
+              <input type="checkbox" class="form__check-field visually-hidden" id="souvenir">
+              <label for="souvenir" class="form__check-name form__check-name--check">Накупил сувениров</label>
+              <input type="checkbox" class="form__check-field visually-hidden" id="tower" checked>
+              <label for="tower" class="form__check-name form__check-name--check">Удержал башню</label>
+              <input type="checkbox" class="form__check-field visually-hidden" id="chaos">
+              <label for="chaos" class="form__check-name form__check-name--check">Разгромил отель</label>
             </div>
           </fieldset>
           <fieldset class="form__group form__group--tel">
@@ -107,12 +117,12 @@
               <span>С каким приложением путешествовали?</span>
             </legend>
             <div class="form__user-app" role="group">
-              <input type="radio" class="form__radio-field" name="app" id="ios" checked>
-              <label for="ios" class="form__caption-radio">Pink для iOS</label>
-              <input type="radio" class="form__radio-field" name="app" id="android">
-              <label for="android" class="form__caption-radio">Pink на Android</label>
-              <input type="radio" class="form__radio-field" name="app" id="windows">
-              <label for="windows" class="form__caption-radio">Windows Phone</label>
+              <input type="radio" class="form__check-field visually-hidden" name="app" id="ios" checked>
+              <label for="ios" class="form__check-name form__check-name--radio">Pink для iOS</label>
+              <input type="radio" class="form__check-field visually-hidden" name="app" id="android">
+              <label for="android" class="form__check-name form__check-name--radio">Pink на Android</label>
+              <input type="radio" class="form__check-field visually-hidden" name="app" id="windows">
+              <label for="windows" class="form__check-name form__check-name--radio">Windows Phone</label>
             </div>
           </fieldset>
           <fieldset class="form__group form__group--desc">
@@ -128,7 +138,7 @@
             <span class="form__required-field"><sup class="form__star">*</sup> &#8212; обязательные <span class="form-require-none">для заполнения</span> поля</span>
           </div>
         </form>
-        <div class="competition__popup competition__popup--err visually-hidden">
+        <div class="competition__popup competition__popup--err">
           <div class="competition__wrap-message">
             <h3 class="competition__title-message">Что-то пошло<br> не так!</h3>
             <p class="competition__desc-message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
@@ -137,7 +147,7 @@
             <button type="button" class="button-form">Ок</button>
           </div>
         </div>
-        <div class="competition__popup competition__popup--ok visually-hidden">
+        <div class="competition__popup competition__popup--ok">
           <div class="competition__wrap-message competition__wrap-message--ok">
             <h3 class="competition__title-message">Ваша заявка отправлена</h3>
             <p class="competition__desc-message">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
@@ -151,8 +161,13 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo">
-          <span class="logo__text" aria-label="text-logo">PINK</span>
+        <a class="page-footer__logo logo" href="index.html">
+          <svg class="logo__mob-footer" width="146" height="40">
+            <use xlink:href="img/sprite.svg#logo-dark-mob"></use>
+          </svg>
+          <svg class="logo__desc-footer" width="146" height="40">
+            <use xlink:href="img/sprite.svg#logo-dark-desc"></use>
+          </svg>
         </a>
         <ul class="page-footer__list social-list">
           <li class="social-list__item">
@@ -172,9 +187,11 @@
           </li>
         </ul>
         <div class="page-footer__copyright">
+          <span class="page-footer__text">Разработано</span>
           <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="page-footer__text">Разработано</span>
-            <span class="page-footer__logo-company">HTML Academy</span>
+            <svg class="page-footer__logo-academy" width="27" height="34">
+              <use xlink:href="img/sprite.svg#logo-academy"></use>
+            </svg>
           </a>
         </div>
       </div>

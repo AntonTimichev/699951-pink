@@ -1,8 +1,8 @@
 .rates {
   border: none;
   padding-top: 93px;
-  background-color: $texture-color;
   width: 100%;
+  background-color: $texture-color;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
   background-position: top right;
@@ -41,12 +41,13 @@
 }
 
 .rates__caption {
+  display: flex;
+  flex-direction: column;
   position: relative;
   color: #ffffff;
   box-sizing: border-box;
   padding: 16px 20px 22px;
   border: solid 2px #e5e5e5;
-  //min-width: 281px;
 
   &--hit::after {
     content: "";
@@ -86,10 +87,8 @@
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  //text-align: left;
   padding: 14px 22px;
   box-sizing: border-box;
-  //min-width: 281px;
   border: solid 2px #e5e5e5;
 
   span {
@@ -106,7 +105,6 @@
 }
 
 .rates__toggles {
-  display: block;
   background-color: $texture-color;
   padding-top: 40px;
   padding-bottom: 48px;
