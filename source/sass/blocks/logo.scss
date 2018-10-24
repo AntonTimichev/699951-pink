@@ -1,23 +1,26 @@
+.logo__mob-header {
+  fill: #ffffff;
+}
+
 .logo[href]:hover .logo__mob-header {
-  g {
-    fill: $insistent-color;
-  }
+  fill: $insistent-color;
 }
 
 .logo[href]:active .logo__mob-header {
+  fill: #ffffff;
   opacity: 0.3;
 }
 
+.logo__mob-footer {
+  color: $base-color;
+}
+
 .logo[href]:hover .logo__mob-footer {
-  g {
-    fill: $insistent-color;
-  }
+  color: $insistent-color;
 }
 
 .logo[href]:active .logo__mob-footer {
-  g {
-    fill: $base-color;
-  }
+  color: $base-color;
   opacity: 0.3;
 }
 
@@ -40,20 +43,15 @@
 
   .logo__tab-header {
     display: inline;
+    fill: #ffffff;
   }
 
   .logo[href]:hover .logo__tab-header {
-    g,
-    path {
-      fill: $insistent-color;
-    }
+    fill: $insistent-color;
   }
 
   .logo[href]:active .logo__tab-header {
-    g,
-    path {
-      fill: #ffffff;
-    }
+    fill: #ffffff;
     opacity: 0.3;
   }
 }
@@ -65,42 +63,33 @@
 
   .logo__desc-header {
     display: inline;
+    color: #ffffff;
   }
 
   .logo[href]:hover .logo__desc-header {
-    g,
-    path {
-      fill: $insistent-color;
-    }
+    color: $insistent-color;
   }
 
   .logo[href]:active .logo__desc-header {
-    g,
-    path {
-      fill: #ffffff;
-    }
+    color: #ffffff;
     opacity: 0.3;
-  }
-
-  .logo__desc-footer {
-    display: inline;
   }
 
   .logo__mob-footer {
     display: none;
   }
 
+  .logo__desc-footer {
+    display: inline;
+    color: $base-color;
+  }
+
   .logo[href]:hover .logo__desc-footer {
-    g,
-    path {
-      fill: $insistent-color;
-    }
+    color: $insistent-color;
   }
 
   .logo[href]:active .logo__desc-footer {
-    path.logo__base {
-      fill: #000000;
-    }
+    color: #000000;
     opacity: 0.3;
   }
 }

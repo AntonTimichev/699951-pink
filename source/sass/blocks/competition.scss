@@ -3,9 +3,7 @@
 }
 
 .competition__intro {
-  @include page-padding;
-  padding-top: 45px;
-  padding-bottom: 17px;
+  padding: 45px 20px 17px;
   max-width: 500px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -29,14 +27,19 @@
 }
 
 .competition__popup {
+  display: none;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  background-color: yellow;
+  background-color: #ffffff;
   margin-bottom: 20px;
   min-height: 289px;
   width: 320px;
+  box-shadow: 10px 0 18px 0 #e6e6e6,
+    -10px 0 18px 0 #e6e6e6,
+    0 10px 18px 0 #e6e6e6,
+    0 -10px 18px 0 #e6e6e6;
 
   &--ok {
     top: 63%;

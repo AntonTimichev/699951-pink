@@ -142,17 +142,9 @@
   margin: 0 auto;
   padding: 20px 0;
   width: 100%;
-
-  &--act {
-    padding-top: 38px;
-  }
-
-  &--app {
-    padding-top: 38px;
-  }
+  padding-top: 38px;
 
   &--desc {
-    padding-top: 38px;
     padding-bottom: 16px;
     background-color: #ffffff;
   }
@@ -324,20 +316,10 @@
     background-color: #ffffff;
     display: block;
     width: auto;
-
-    &--act {
-      padding-top: 18px;
-    }
-
-    &--app {
-      padding-top: 18px;
-    }
-
-    &--desc {
-      padding-top: 18px;
-    }
+    padding-top: 18px;
 
     &--tel {
+      padding: 20px 0;
       display: block;
     }
 
@@ -563,8 +545,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    //flex-direction: column;
-    //height: 200px;
     min-height: 200px;
     padding: 24px 58px 12px;
     box-sizing: border-box;

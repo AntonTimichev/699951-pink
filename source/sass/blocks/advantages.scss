@@ -74,8 +74,8 @@
 }
 
 @media (min-width: 320px) and (max-width: $tablet-width - 1) {
-  .advantages__wrapper {
-    //max-width: 500px;
+  .advantages__list {
+    max-width: 430px;
     margin: 0 auto;
   }
 }
@@ -83,6 +83,7 @@
 @media (min-width: $tablet-width) {
   .advantages__header {
     padding-top: 49px;
+    padding-bottom: 50px;
   }
 
   .advantages__intro {
@@ -91,10 +92,6 @@
 
     br {
       display: inline;
-    }
-
-    &--answer {
-      margin-bottom: 50px;
     }
   }
 
@@ -123,9 +120,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding-top: 69px;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 69px 0 0;
     width: 50%;
 
     &::after {
@@ -165,12 +160,10 @@
   }
 
   .advantages__effect {
-    @include page-padding;
     display: flex;
     align-items: center;
     background-color: #ffffff;
-    padding-top: 60px;
-    padding-bottom: 63px;
+    padding: 60px 20px 63px;
   }
 
   .advantages__logo {
@@ -187,8 +180,8 @@
   }
 
   .advantages__clock {
-    margin: 0 auto;
     position: relative;
+    margin: 0 auto;
     width: 202px;
     height: 202px;
     box-sizing: border-box;
@@ -224,22 +217,17 @@
 @media (min-width: $desktop-width) {
   .advantages__intro {
     @include font-settings(50px, 59px, 300);
-
-    &--answer {
-      margin-bottom: 74px;
-    }
   }
 
   .advantages__header {
     padding-top: 69px;
+    padding-bottom: 74px;
   }
 
   .advantages__wrapper {
-    //@include page-padding(10px);
     display: flex;
     background-size: 100%;
-    //width: 960px;
-    //margin: 0 auto;
+    padding: 0;
 
     &::before {
       display: none;
@@ -250,23 +238,37 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
-    //margin: 0 40px;
-    margin: 0 auto;
+    margin: 0 auto 39px;
     padding: 0 10px;
-    //width: 100%;
     width: 960px;
     box-sizing: border-box;
   }
 
   .advantages__item {
     min-height: 108px;
-    width: 240px;
-    margin-bottom: 19px;
-    margin-right: 78px;
+    width: 313px;
+    margin-bottom: 0;
+    padding: 0 36px;
+    box-sizing: border-box;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &:nth-child(3n) {
       margin-right: 0;
+      padding-right: 30px;
+      padding-left: 42px;
+    }
+
+    &:nth-child(3n+1) {
+      margin-right: 0;
+      padding-right: 42px;
+      padding-left: 30px;
+    }
+
+    &:nth-child(n+4) {
+      margin-top: 40px;
     }
 
     &:first-child::before,
@@ -308,10 +310,6 @@
         background-image: url("../img/iphone-screen-3-desktop@2x.png");
       }
     }
-
-    &:last-child {
-      margin-bottom: 19px;
-    }
   }
 
   .advantages__caption {
@@ -352,11 +350,10 @@
     display: flex;
     align-items: center;
     background-color: $texture-color;
-    padding: 47px 0 67px;
+    padding: 27px 0 67px;
   }
 
   .advantages__logo {
-    //padding: 0 23px;
     margin-left: 0;
     margin-right: 67px;
     padding-top: 70px;

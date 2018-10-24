@@ -1,6 +1,5 @@
 .reviews {
   width: 100%;
-  //outline: solid 3px green;
 }
 
 .reviews__author-name {
@@ -35,7 +34,6 @@
 }
 
 .reviews__wrapper {
-  //outline: solid 3px green;
   width: 320px;
   height: 100%;
   overflow: hidden;
@@ -108,6 +106,7 @@
 
   .reviews__wrapper {
     width: 820px;
+    margin-bottom: 0;
   }
 
   .reviews__btn-left,
