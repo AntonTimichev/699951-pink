@@ -59,7 +59,7 @@
     }
 
     @include placeholder-moz {
-      @include font-settings(18px, 13px, normal);
+      @include font-settings(18px, 30px, normal);
       color: $base-color;
     }
 
