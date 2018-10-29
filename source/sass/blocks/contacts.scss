@@ -53,6 +53,8 @@
 .contacts__note {
   @include font-settings(24px, 26px, 300);
   text-decoration: none;
+  width: auto;
+  margin: 0 auto;
   color: $insistent-color;
 
   &--mail {
@@ -62,6 +64,8 @@
     }
 
     &:active {
+      color: $base-color;
+      text-decoration: none;
       opacity: 0.3;
     }
   }
@@ -80,12 +84,18 @@
   }
 }
 
-.re {
-  height: 200px;
-  background-color: #2aab6d;
+.contacts__iframe {
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    &::after {
+      content: "";
+      bottom: -68px;
+    }
+  }
+
   .contacts__text {
     @include font-settings(40px, 47px, 300);
   }
@@ -154,8 +164,7 @@
     &::after {
       content: "";
       bottom: -100px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
       height: 130px;
       width: 100%;
       background-image: url("../img/bg-triangle-white-footer.svg");

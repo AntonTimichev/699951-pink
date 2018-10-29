@@ -7,7 +7,7 @@
   margin: 0;
 }
 
-.filter-block {
+.filter__block {
   background-color: $texture-color;
 }
 
@@ -17,62 +17,66 @@
   margin: 0 auto;
 }
 
-.filter__settings {
+.filter__group {
   @include indent-zero;
   @include page-padding;
-  padding-top: 22px;
-  height: 140px;
   border: none;
   border-bottom: solid 1px #dddfe0;
+}
+
+.filter__settings {
+  display: flex;
+  flex-wrap: wrap;
+  width: 210px;
+  position: relative;
+  padding: 22px 0 70px;
+  min-height: 140px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .filter__set {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  margin-right: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 44px;
+  margin-right: 33px;
 
-  &:last-child {
+  &:nth-child(n+4) {
+    margin-top: 30px;
+  }
+
+  &:nth-child(3n) {
     margin-right: 0;
   }
 
-  &--clip {
-    .filter__range {
-      position: absolute;
-      left: -17px;
-      top: 52px;
+  .filter__range {
+    position: absolute;
+    right: -14px;
+    bottom: -10px;
 
-      @supports (background-blend-mode: hue) {
-        left: -17px;
-        top: 82px;
-      }
+    @supports (--variable-name: 10px) {
+      bottom: 20px;
+    }
+
+    @supports (background-blend-mode: hue) {
+      right: -14px;
+      bottom: 33px;
+      background-color: $texture-color;
     }
   }
 
-  &--paint {
-    .filter__range {
-      display: none;
-      left: -17px;
-      top: 82px;
-    }
-  }
-
+  &--paint,
   &--contrast {
     .filter__range {
       display: none;
-      left: -17px;
-      top: 82px;
     }
   }
 
   input[type="range"] {
     appearance: none;
     width: 240px;
-  }
-
-  input[type="range"]:focus {
-    outline: none;
   }
 
   input[type="range"]::-webkit-slider-runnable-track {
@@ -91,6 +95,10 @@
     width: 100%;
     height: 0;
     border: solid 1px #000000;
+  }
+
+  input[type="range"]:focus::-moz-range-track {
+    outline: solid 2px rgba(77, 144, 254, 0.3);
   }
 
   input[type="range"]::-moz-range-thumb {
@@ -113,6 +121,14 @@
 
   input[type="range"]::-ms-fill-upper {
     border: 1px solid #000000;
+  }
+
+  input[type="range"]:focus::-ms-fill-lower {
+    outline: solid 2px rgba(77, 144, 254, 0.3);
+  }
+
+  input[type="range"]:focus::-ms-fill-upper {
+    outline: solid 2px rgba(77, 144, 254, 0.3);
   }
 
   input[type="range"]::-ms-thumb {
@@ -150,11 +166,11 @@
   }
 }
 
-.filter-btn {
+.filter__btn {
   padding: 38px 20px 40px;
 }
 
-.filter-btn__item {
+.filter__btn-item {
   margin: 0 auto 12px;
 
   &:last-child {
@@ -171,8 +187,9 @@
     font-size: 18px;
   }
 
-  .filter-block {
+  .filter__block {
     display: flex;
+    align-items: center;
     padding: 57px 20px;
   }
 
@@ -192,6 +209,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 400px;
     min-width: 275px;
     max-width: 350px;
     box-sizing: border-box;
@@ -199,16 +217,24 @@
     margin-right: auto;
   }
 
+  .filter__group {
+    padding: 0;
+    border: none;
+  }
+
   .filter__settings {
-    height: 200px;
+    min-height: 200px;
+    width: 277px;
     padding: 0;
     border-bottom: none;
+    margin-bottom: 60px;
   }
 
   .filter__set {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     height: 74px;
     box-sizing: border-box;
     margin-right: 0;
@@ -220,10 +246,12 @@
       padding-bottom: 10px;
     }
 
-    &--clip {
-      .filter__range {
-        position: static;
-      }
+    &:nth-child(n+4) {
+      margin-top: 0;
+    }
+
+    .filter__range {
+      position: static;
     }
 
     &--paint {
@@ -270,11 +298,11 @@
     }
   }
 
-  .filter-btn {
+  .filter__btn {
     padding: 0 12px 0 0;
   }
 
-  .filter-btn__item {
+  .filter__btn-item {
     margin-bottom: 24px;
     width: 260px;
   }
@@ -292,9 +320,17 @@
     padding: 5px 20px 38px;
   }
 
-  .filter-block {
+  .filter__block {
+    min-height: 512px;
     padding-left: 80px;
     padding-right: 60px;
+    box-sizing: border-box;
+  }
+
+  .filter__settings {
+    min-height: 285px;
+    width: 100%;
+    flex-direction: column;
   }
 
   .filter__controls {
@@ -331,13 +367,13 @@
     }
   }
 
-  .filter-btn {
+  .filter__btn {
     display: flex;
     justify-content: space-between;
     padding: 0;
   }
 
-  .filter-btn__item {
+  .filter__btn-item {
     margin: 0;
     width: 183px;
   }
