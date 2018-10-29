@@ -7,6 +7,8 @@
       content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin>
   </head>
   <body>
     <script src="js/picturefill.js"></script>
@@ -110,11 +112,11 @@
               <span>Контактная информация</span>
             </legend>
             <div class="form__user-contacts" role="group">
-              <label for="tel" class="form__caption-input form__caption-input--contacts">
+              <label for="tel" class="form__caption-input form__caption-input--tel">
                 <span class="form__caption-text">Номер телефона</span>
                 <input type="tel" class="form__input-field form__input-field--cont" id="tel" name="tel" placeholder="Номер, пожалуйста">
               </label>
-              <label for="mail" class="form__caption-input form__caption-input--contacts">
+              <label for="mail" class="form__caption-input form__caption-input--mail">
                 <span class="form__caption-text">Адрес почты</span>
                 <input type="email" class="form__input-field form__input-field--cont" id="mail" name="mail" placeholder="Введите почту &#42;" required>
               </label>
